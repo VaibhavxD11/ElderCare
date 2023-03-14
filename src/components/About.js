@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { SocialIcon } from 'react-social-icons';
 // import './About.css';
 // Hello
+// hello 
 
 function About() {
     return (
