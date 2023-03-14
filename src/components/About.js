@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { SocialIcon } from 'react-social-icons';
-// import './About.css';
+import './About.css';
 
 function About() {
     return (
