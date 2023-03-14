@@ -98,7 +98,6 @@ const HomePage = () => {
                           <Card style={{ width: '30rem', height: '35rem' }}>
                               <Card.Img variant="center" src="food.jpg" />
                               <Card.Body>
-                                  <Card.Title>12345 Numbers</Card.Title>
                                   <Card.Title>Emergency Numbers</Card.Title>
                                   <Card.Text>
                                       Some quick example text to build on the card title and make up the
@@ -111,9 +110,9 @@ const HomePage = () => {
                   </Col>
               </Row>
 
-          </Container>
-      </>
-  )
+            </Container>
+        </>
+    )
 }
 
 export default HomePage;
