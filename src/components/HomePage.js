@@ -91,6 +91,7 @@ const HomePage = () => {
                   </Col>
 
                   {/* Card Number 2 */}
+                  {/* ?? */}
                   {/* Hello There it is another card */}
                   <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
                       <center>
