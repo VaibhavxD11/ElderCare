@@ -1,0 +1,29 @@
+.foot {
+    /* position: fixed; */
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    background-color: orange;
+    text-align: center;
+}
+
+.foot a {
+    display: block;
+    text-align: center;
+    font-size: large;
+    padding: 5px 18px;
+    text-decoration: none;
+    width: 25px;
+}
+
+
+
+#text-in-footer {
+    width: auto;
+}
+
+.foot a:hover {
+    color: white;
+}
