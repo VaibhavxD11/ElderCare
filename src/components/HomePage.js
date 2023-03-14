@@ -90,6 +90,7 @@ const HomePage = () => {
                       </center>
                   </Col>
                   {/* Hello There it is another card */}
+                  {/* >>>>>> */}
                   <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
                       <center>
                           <Card style={{ width: '30rem', height: '35rem' }}>
