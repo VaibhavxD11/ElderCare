@@ -22,7 +22,7 @@
   margin: 30px;
   /* border: 2px solid black; */
   border-radius: 10%;
-  box-shadow: 0 0 10px 1px rgba(249, 180, 45 , 1);
+  box-shadow: 0 0 10px 1px grey;
 }
 
 .card-image:hover {

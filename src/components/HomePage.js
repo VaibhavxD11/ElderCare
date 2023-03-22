@@ -26,7 +26,7 @@ const HomePage = () => {
                 src="sos.jpg"
                 alt="sos image"
                 className="card-image"
-                onClick={sayHello}
+                onClick= {sayHello}
               ></img>
             </center>
           </Col>
