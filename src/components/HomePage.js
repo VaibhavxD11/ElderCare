@@ -10,6 +10,10 @@ import "./HomePage.css";
 //ahan its here finally
 //this is for elder
 
+function sayHello() {
+  alert("You clicked me!");
+}
+
 const HomePage = () => {
   return (
     <>
@@ -18,16 +22,12 @@ const HomePage = () => {
           {/* //EMERGENCY contact number */}
           <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
             <center>
-              <Card style={{ width: "300px", height: "300px" }}>
-                <Card.Body>
-                  <Card.Img
-                    variant="center"
-                    src="sos.jpg"
-                    className="card-image"
-                  />
-                  <Card.Title>EMERGENCY</Card.Title>
-                </Card.Body>
-              </Card>
+              <img
+                src="sos.jpg"
+                alt="sos image"
+                className="card-image"
+                onClick={sayHello}
+              ></img>
             </center>
           </Col>
 
@@ -35,79 +35,40 @@ const HomePage = () => {
 
           <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
             <center>
-              <Card style={{ width: "300px", height: "300px" }}>
-                <Card.Body>
-                  <Card.Img
-                    variant="center"
-                    src="med.jpg"
-                    className="card-image"
-                  />
-                  <Card.Title>MEDICINE</Card.Title>
-                </Card.Body>
-              </Card>
-            </center>
-          </Col>
-
-          {/* FOOD LOGGER */}
-          <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
-            <center>
-              <Card style={{ width: "300px", height: "300px" }}>
-                <Card.Body>
-                  <Card.Img
-                    variant="center"
-                    src="food.jpg"
-                    className="card-image"
-                  />
-                  <Card.Title>FOOD LOGGER</Card.Title>
-                </Card.Body>
-              </Card>
+            <img
+                src="med.jpg"
+                alt="medicine image"
+                className="card-image"
+                onClick={sayHello}
+              ></img>
             </center>
           </Col>
 
           <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
             <center>
-              <Card style={{ width: "300px", height: "300px" }}>
-                <Card.Img variant="center" src="food.png" />
-                <Card.Body>
-                  <Card.Title>Emergency Numbers</Card.Title>
-                </Card.Body>
-              </Card>
+            <img
+                src="med.jpg"
+                alt="medicine image"
+                className="card-image"
+                onClick={sayHello}
+              ></img>
+            </center>
+          </Col>
+          
+          <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
+            <center>
+            <img
+                src="med.jpg"
+                alt="medicine image"
+                className="card-image"
+                onClick={sayHello}
+              ></img>
             </center>
           </Col>
 
-          <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
-            <center>
-              <Card style={{ width: "300px", height: "300px" }}>
-                <Card.Img variant="center" src="food.png" />
-                <Card.Body>
-                  <Card.Title>Emergency Numbers</Card.Title>
-                </Card.Body>
-              </Card>
-            </center>
-          </Col>
 
-          {/* Card Number 2 */}
-          <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
-            <center>
-              <Card style={{ width: "300px", height: "300px" }}>
-                <Card.Img variant="center" src="food.png" />
-                <Card.Body>
-                  <Card.Title>12345 Numbers</Card.Title>
-                </Card.Body>
-              </Card>
-            </center>
-          </Col>
 
-          <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
-            <center>
-              <Card style={{ width: "300px", height: "300px" }}>
-                <Card.Img variant="center" src="food.png" />
-                <Card.Body>
-                  <Card.Title>Emergency Numbers</Card.Title>
-                </Card.Body>
-              </Card>
-            </center>
-          </Col>
+          
         </Row>
       </Container>
     </>
