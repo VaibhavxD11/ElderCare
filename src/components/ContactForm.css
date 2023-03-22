@@ -8,7 +8,8 @@
 
 body,
 input,
-textarea {
+textarea
+{
     font-family: "Poppins", sans-serif;
     font-size: large;
 }
@@ -18,7 +19,7 @@ textarea {
     width: 100%;
     min-height: 100vh;
     padding: 2rem;
-    background-color: #fafafa;
+    background-color:#fff;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -40,6 +41,9 @@ textarea {
 .contact-form {
     background-color: orange;
     position: relative;
+}
+::placeholder{
+    color: white;
 }
 
 .circle {
@@ -150,7 +154,7 @@ textarea.input {
 
 .btn:hover {
     background-color: transparent;
-    color: #fff;
+    color: white;
 }
 
 .input-container span {
