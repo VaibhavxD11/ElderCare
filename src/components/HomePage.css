@@ -1,10 +1,15 @@
-.main-row-home-1{
-    margin: 20px 0px 20px 0px;
-    /* background-color: ghostwhite; */
+.main-row-home-1 {
+  margin: 20px 0px 20px 0px;
 }
 
-.card{
-    margin: 20px;
+.card {
+  transition: all 0.5s ease;
+  margin: 30px;
+}
+
+.card:hover {
+  transition: all 0.4s ease;
+  transform: translate3D(0,-1px,0) scale(1.20);
 }
 
 /* .card-btn{
@@ -19,3 +24,11 @@
     background: orange;
     
 } */
+
+.card-image{
+  height: 225px;
+  width: 225px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

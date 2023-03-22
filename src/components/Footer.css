@@ -1,29 +1,36 @@
 .foot {
-    /* position: fixed; */
     display: flex;
-    padding: 10px;
+    padding: 15px;
     justify-content: center;
     bottom: 0;
     width: 100%;
     background-color: orange;
     text-align: center;
+    align-items: center;
 }
-
-.foot a {
-    display: block;
-    text-align: center;
-    font-size: large;
-    padding: 5px 18px;
-    text-decoration: none;
-    width: 25px;
-}
-
-
 
 #text-in-footer {
     width: auto;
 }
 
-.foot a:hover {
-    color: white;
+.footer-social-icons a {
+    padding-right: 10px;
+    width: 10px;
+    height: 10px;
+    /* border-radius: 5px; */
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 0.5rem;
+    transition: 0.3s;
+    size: 10px;
+}
+
+.footer-social-icons a:hover {
+    transform: scale(1.40);
+}
+
+.fab fa-facebook-f{
+    height: 10px;
+    width: 10px;
 }

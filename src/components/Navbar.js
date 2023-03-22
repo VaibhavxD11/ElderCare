@@ -30,7 +30,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink to="/login">
-                <button type="button" class="btn btn-outline-warning btn-lg">Login/SignUp</button>
+                <button type="button" class="btn btn-outline-warning btn-lg" >Login/SignUp</button>
               </NavLink>
             </li>
           </ul>

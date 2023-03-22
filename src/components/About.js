@@ -18,25 +18,6 @@ function About() {
                             We are providing a platform to the customer to be well informed about their guardians if they are not able to do so while living in other countries or far away from them.
                             We are providing a platform to the customer to be well informed about their guardians if they are not able to do so while living in other countries or far away from them.
                         </p>
-
-
-                        <div class="social-media">
-                            <p>Connect with us :</p>
-                            <div class="social-icons">
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"><SocialIcon url="https://twitter.com/PiyushS85128013" target="_twitter" /></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-twitter"><SocialIcon url="https://www.instagram.com/piyush_m87/" target="_instagram" /></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-instagram"><SocialIcon url="https://www.facebook.com/" target="_facebook" /></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fab fa-linkedin-in"><SocialIcon url="https://github.com/piyush3441" target="_github" /></i>
-                                </a>
-                            </div>
-                        </div>
                     </div>
 
                     <div className='image'>

@@ -15,7 +15,7 @@ const Home = () => {
       <Navbar />
       <section className="hero-section">
         <p>Welcome To</p>
-        <a href="/"><img src="image.jpg" height="320px" width="300px"></img></a>
+        <a href="/"><img src="image.jpg" height="300px" width="300px"></img></a>
         <h1>Support You</h1>
       </section>
       <Footer/>
