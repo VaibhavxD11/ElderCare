@@ -1,10 +1,12 @@
 .main-row-home-1 {
-  margin: 20px 0px 20px 0px;
+  margin: 20px 20px;
+  /* background-color: brown; */
+  width: auto;
 }
 
 .card {
   transition: all 0.5s ease;
-  margin: 30px;
+  margin: 20px auto;
 }
 
 .card:hover {

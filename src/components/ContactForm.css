@@ -43,7 +43,8 @@ textarea
     position: relative;
 }
 ::placeholder{
-    color: white;
+    color: black;
+    font-size: small;
 }
 
 .circle {
@@ -87,7 +88,7 @@ form {
 .title {
     color: #fff;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     line-height: 1;
     margin-bottom: 0.7rem;
 }
@@ -138,13 +139,14 @@ textarea.input {
     transform: translateY(0);
 }
 
-.btn {
+.send-button {
     padding: 0.6rem 1.3rem;
     background-color: #fff;
     border: 2px solid #fafafa;
-    font-size: 0.95rem;
-    color: orange;
-    line-height: 1;
+    width: 50%;
+    font-size: 1.3rem;
+    color: black;
+    line-height: 1.5;
     border-radius: 25px;
     outline: none;
     cursor: pointer;
@@ -152,9 +154,8 @@ textarea.input {
     margin: 0;
 }
 
-.btn:hover {
-    background-color: transparent;
-    color: white;
+.send-button:hover {
+    background-color: rgb(218, 228, 226);
 }
 
 .input-container span {
@@ -222,7 +223,7 @@ textarea.input {
     color: #555;
     margin: 0.7rem 0;
     align-items: center;
-    font-size: 0.95rem;
+    font-size: 1.4rem;
 }
 
 .icon {
@@ -303,7 +304,7 @@ textarea.input {
     opacity: 0.2;
 }
 
-@media (max-width: 850px) {
+/* @media (max-width: 850px) {
     .form {
         grid-template-columns: 1fr;
     }
@@ -387,4 +388,4 @@ textarea.input {
     .btn {
         padding: 0.45rem 1.2rem;
     }
-}
+} */

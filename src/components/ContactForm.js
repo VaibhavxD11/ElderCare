@@ -6,7 +6,7 @@ import './ContactForm.css';
 
 function ContactForm() {
     return (
-        <div className="prince">
+        <div className="contactpage">
             <div class="container">
                 <span class="big-circle"></span>
                 <img src="img/shape.png" class="square" alt="" />
@@ -51,7 +51,9 @@ function ContactForm() {
                             <div class="input-container textarea">
                                 <textarea name="message" class="input" placeholder="Message"></textarea>
                             </div>
-                            <input type="submit" value="Send" class="btn" />
+                            <center>
+                                <input type="submit" value="Send" class="send-button" />
+                            </center>
                         </form>
                     </div>
                 </div>
