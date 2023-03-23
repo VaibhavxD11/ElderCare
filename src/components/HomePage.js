@@ -16,7 +16,7 @@ const HomePage = () => {
       <Container fluid>
         <Row className="main-row-home-1 justify-md-content-center">
           {/* //EMERGENCY contact number */}
-          <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
+          <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
             <center>
               <Card style={{ width: "300px", height: "300px" }}>
                 <Card.Body>
@@ -33,7 +33,7 @@ const HomePage = () => {
 
           {/* Medicine */}
 
-          <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
+          <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
             <center>
               <Card style={{ width: "300px", height: "300px" }}>
                 <Card.Body>
@@ -49,7 +49,7 @@ const HomePage = () => {
           </Col>
 
           {/* FOOD LOGGER */}
-          <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
+          <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
             <center>
               <Card style={{ width: "300px", height: "300px" }}>
                 <Card.Body>
@@ -59,51 +59,6 @@ const HomePage = () => {
                     className="card-image"
                   />
                   <Card.Title>FOOD LOGGER</Card.Title>
-                </Card.Body>
-              </Card>
-            </center>
-          </Col>
-
-          <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
-            <center>
-              <Card style={{ width: "300px", height: "300px" }}>
-                <Card.Img variant="center" src="food.png" />
-                <Card.Body>
-                  <Card.Title>Emergency Numbers</Card.Title>
-                </Card.Body>
-              </Card>
-            </center>
-          </Col>
-
-          <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
-            <center>
-              <Card style={{ width: "300px", height: "300px" }}>
-                <Card.Img variant="center" src="food.png" />
-                <Card.Body>
-                  <Card.Title>Emergency Numbers</Card.Title>
-                </Card.Body>
-              </Card>
-            </center>
-          </Col>
-
-          {/* Card Number 2 */}
-          <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
-            <center>
-              <Card style={{ width: "300px", height: "300px" }}>
-                <Card.Img variant="center" src="food.png" />
-                <Card.Body>
-                  <Card.Title>12345 Numbers</Card.Title>
-                </Card.Body>
-              </Card>
-            </center>
-          </Col>
-
-          <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
-            <center>
-              <Card style={{ width: "300px", height: "300px" }}>
-                <Card.Img variant="center" src="food.png" />
-                <Card.Body>
-                  <Card.Title>Emergency Numbers</Card.Title>
                 </Card.Body>
               </Card>
             </center>

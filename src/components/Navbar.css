@@ -34,19 +34,23 @@ li {
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
-.btn-outline-warning{
+.btn-warning-outline{
   color: black;
-  /* background-color: lightskyblue; */
+  background-color: #fff;
   border-color: #eee;
   border: 2px solid #fff;
   width: 100%;
   height: 100%;
   border-radius: 30px;
-  font-size: large;
+  font-family: "Jost", sans-serif;
+  font-size: 65.5%;
+  font-size: medium;
 }
 
-.btn-outline-warning:hover{
-  background-color: ghostwhite;
+.button-login:hover{
+  background-color: rgb(218, 228, 226);
+  /* box-shadow: rgba(255,255,255,255) 1px 0px 0px 1px; */
+  border-width: 2px;
 }
 
 .logo {
@@ -242,7 +246,7 @@ li {
 @media (max-width: 520px) {
   .main-nav {
     height: 6rem;
-    grid-template-columns: 1rem 4fr 1fr 1fr 1rem;
+    /* grid-template-columns: 1rem 4fr 1fr 1fr 1rem; */
   }
 
   .logo,

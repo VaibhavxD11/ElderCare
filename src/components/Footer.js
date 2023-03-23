@@ -3,7 +3,7 @@ import { SocialIcon } from "react-social-icons";
 
 function Footer() {
   return (
-    <footer className="foot">
+    <footer className="foot fixed-bottom">
       <div class="footer-social-icons">
         <a id="text-in-footer">
           Copyright 2023 Team SupportYou, All Rights Reserved.
