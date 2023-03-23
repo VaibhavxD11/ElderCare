@@ -14,23 +14,22 @@
   transform: translate3D(0,-1px,0) scale(1.20);
 }
 
-/* .card-btn{
-    color: black;
-    background-color: lightskyblue;
-    border: 2px solid #fff;
-    border-radius: 30px;
-    font-size: large;
-} */
 
-/* .card-btn:hover{
-    background: orange;
-    
-} */
+
 
 .card-image{
-  height: 225px;
-  width: 225px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  height: 300px;
+  width: 300px;
+  transition: all 0.5s ease;
+  margin: 30px;
+  /* border: 2px solid black; */
+  border-radius: 10%;
+  box-shadow: 0 0 10px 1px grey;
 }
+
+.card-image:hover {
+  transition: all 0.4s ease;
+  transform: translate3D(0,-1px,0) scale(1.20);
+}
+
+
