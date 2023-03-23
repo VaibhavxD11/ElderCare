@@ -11,7 +11,7 @@ import "./HomePage.css";
 //this is for elder
 
 function sayHello() {
-  alert("You clicked me!");
+  alert("function is excueted");
 }
 
 const HomePage = () => {
