@@ -26,7 +26,7 @@ const HomePage = () => {
                 src="sos.jpg"
                 alt="sos image"
                 className="card-image"
-                onClick= {sayHello}
+                onClick={sayHello}
               ></img>
             </center>
           </Col>
@@ -35,7 +35,7 @@ const HomePage = () => {
 
           <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
             <center>
-            <img
+              <img
                 src="med.jpg"
                 alt="medicine image"
                 className="card-image"
@@ -46,7 +46,7 @@ const HomePage = () => {
 
           <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
             <center>
-            <img
+              <img
                 src="med.jpg"
                 alt="medicine image"
                 className="card-image"
@@ -54,10 +54,10 @@ const HomePage = () => {
               ></img>
             </center>
           </Col>
-          
+
           <Col className="col-1" xs={12} sm={6} md={6} lg={4}>
             <center>
-            <img
+              <img
                 src="med.jpg"
                 alt="medicine image"
                 className="card-image"
@@ -65,10 +65,6 @@ const HomePage = () => {
               ></img>
             </center>
           </Col>
-
-
-
-          
         </Row>
       </Container>
     </>
