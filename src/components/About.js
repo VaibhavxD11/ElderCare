@@ -6,13 +6,13 @@ import './About.css';
 
 function About() {
     return (
-        <div className="prince">
+        <div className="aboutpage">
             <div class="container">
                 <span class="big-circle"></span>
                 <img src="img/shape.png" class="square" alt="" />
-                <div class="form">
+                <div class="textblock">
                     <div class="contact-info">
-                        <p class="text">
+                        <p class="text" align="justify">
                             We are providing a platform to the customer to be well informed about their guardians if they are not able to do so while living in other countries or far away from them.
                             We are providing a platform to the customer to be well informed about their guardians if they are not able to do so while living in other countries or far away from them.
                             We are providing a platform to the customer to be well informed about their guardians if they are not able to do so while living in other countries or far away from them.

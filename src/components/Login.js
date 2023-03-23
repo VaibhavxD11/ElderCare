@@ -12,7 +12,7 @@ const Login = () => {
 
         <div className="login-form">
             <div class={`cont ${toggle ? "s--signup" : ""}`}>
-                <div class="form sign-in">
+                <div class="loginform sign-in">
                     <h2>Login as Elder</h2>
                     <label>
                         <span>id</span>
@@ -44,7 +44,7 @@ const Login = () => {
                             <span class="m--in">Sign In</span>
                         </div>
                     </div>
-                    <div class="form sign-up">
+                    <div class="loginform sign-up">
                         <h2>Login as Guardian</h2>
                         <label>
                             <span>Guardian Name</span>
