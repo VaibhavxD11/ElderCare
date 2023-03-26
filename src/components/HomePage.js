@@ -59,13 +59,10 @@ const HomePage = () => {
             </center>
           </Col>
 
-<<<<<<< HEAD
           {/* <div>
             
           </div> */}
 
-=======
->>>>>>> d8f858b2c53da838dd7799ab8eee6ac31f772698
           {/* Medicine */}
 
           <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
