@@ -50,7 +50,7 @@ li {
 .button-login:hover{
   background-color: rgb(218, 228, 226);
   /* box-shadow: rgba(255,255,255,255) 1px 0px 0px 1px; */
-  border-width: 2px;
+  border: 2px solid #fafafa;
 }
 
 .logo {
@@ -246,6 +246,7 @@ li {
 @media (max-width: 520px) {
   .main-nav {
     height: 6rem;
+    grid-template-columns: 1rem 4fr 1fr 1fr 1rem;
     grid-template-columns: 1.5rem 4fr 1fr 1fr 1rem;
   }
 

@@ -1,38 +1,71 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./HomePage.css";
 
-//ahan its here finally
-//this is for elder
-
-function sayHello() {
-  alert("function is excueted");
-}
-
 const HomePage = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+
+
+
+
+  const Popup = () => {
+    return (
+      <>
+        <div className="modal-wrapper" onClick={closeModal}></div>
+        <div className="modal-container">
+          <h2>STAY TUNED</h2>
+          <p>
+            Subscribe to our newsletter and never miss our designs ,latest
+            news.etc. Our newsletter is sent once a week, every Monday
+          </p>
+
+          <button onClick={closeModal} className="modal-btn">
+            OK
+          </button>
+        </div>
+      </>
+    );
+  };
+
+
+
+
+
+  
+
   return (
     <>
       <Container fluid>
-        <Row className="main-row-home-1 justify-md-content-center">
+        <Row className="main-row-home-1 ">
           {/* //EMERGENCY contact number */}
           <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
             <center>
               <img
                 src="sos.jpg"
                 alt="sos image"
-                className="card-image"
-                onClick={sayHello}
+                className="card-image img-fluid"
+                onClick={() => setShowModal(true)}
               ></img>
+
+              {showModal && <Popup />}
             </center>
           </Col>
 
+<<<<<<< HEAD
           {/* <div>
             
           </div> */}
 
+=======
+>>>>>>> d8f858b2c53da838dd7799ab8eee6ac31f772698
           {/* Medicine */}
 
           <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
@@ -40,18 +73,27 @@ const HomePage = () => {
               <img
                 src="med.jpg"
                 alt="medicine image"
-                className="card-image"
-                onClick={sayHello}
+                className="card-image img-fluid"
               ></img>
             </center>
           </Col>
+
           <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
             <center>
               <img
                 src="food.jpg"
                 alt="food image"
-                className="card-image"
-                onClick={sayHello}
+                className="card-image img-fluid"
+              ></img>
+            </center>
+          </Col>
+
+          <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
+            <center>
+              <img
+                src="food.jpg"
+                alt="food image"
+                className="card-image img-fluid"
               ></img>
             </center>
           </Col>

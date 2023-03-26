@@ -7,7 +7,7 @@ const Navbar = () => {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   return (
     <>
-      <nav className="main-nav">
+      <nav className="main-nav fixed-top">
         <div
           className={
             showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
