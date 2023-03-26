@@ -29,7 +29,7 @@ li {
   height: 10rem;
   display: grid;
   background-color: orange;
-  grid-template-columns: 26rem 1fr 25rem;
+  grid-template-columns: 25rem 1fr 25rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
@@ -246,7 +246,7 @@ li {
 @media (max-width: 520px) {
   .main-nav {
     height: 6rem;
-    /* grid-template-columns: 1rem 4fr 1fr 1fr 1rem; */
+    grid-template-columns: 1.5rem 4fr 1fr 1fr 1rem;
   }
 
   .logo,

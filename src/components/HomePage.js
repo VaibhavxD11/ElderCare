@@ -29,9 +29,9 @@ const HomePage = () => {
             </center>
           </Col>
 
-          <div>
+          {/* <div>
             
-          </div>
+          </div> */}
 
           {/* Medicine */}
 
