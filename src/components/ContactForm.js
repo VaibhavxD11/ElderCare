@@ -40,16 +40,16 @@ function ContactForm() {
                         <form classname="InputForm"action="index.html" autocomplete="off">
                             <h3 class="title">Contact us</h3>
                             <div class="input-container">
-                                <input type="text" placeholder="Username" name="name" class="input" style={{color:'white'}} />
+                                <input type="text" placeholder="Username" name="name" class="input" style={{fontSize:"13px"}} />
                             </div>
                             <div class="input-container">
-                                <input type="email" name="email" class="input" placeholder="E-Mail" />
+                                <input type="email" name="email" class="input" placeholder="E-Mail" style={{fontSize:"13px"}}/>
                             </div>
                             <div class="input-container">
-                                <input type="tel" name="phone" class="input" placeholder="Phone" />
+                                <input type="tel" name="phone" class="input" placeholder="Phone" style={{fontSize:"13px"}}/>
                             </div>
                             <div class="input-container textarea">
-                                <textarea name="message" class="input" placeholder="Message"></textarea>
+                                <textarea name="message" class="input" placeholder="Message" style={{fontSize:"13px"}}></textarea>
                             </div>
                             <center>
                                 <input type="submit" value="Send" class="send-button" />
