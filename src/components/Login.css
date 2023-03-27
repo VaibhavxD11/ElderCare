@@ -6,8 +6,10 @@
     padding: 0;
 }
 
+
+/* just gave margin to the form body */
 .login-form{
-    margin: 5rem;
+    margin: 13rem;
 }
 
 body {
