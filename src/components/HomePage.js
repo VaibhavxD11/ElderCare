@@ -56,6 +56,10 @@ const HomePage = () => {
             </center>
           </Col>
 
+          {/* <div>
+            
+          </div> */}
+
           {/* Medicine */}
 
           <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
