@@ -17,6 +17,8 @@
 
 
 
+
+
 .card-image{
   height: 300px;
   width: 300px;
@@ -30,7 +32,11 @@
 .card-image:hover {
   transition: all 0.4s ease;
   transform: translate3D(0,-1px,0) scale(1.20);
+  cursor: pointer;
 }
+
+
+
 
 
 
@@ -72,15 +78,42 @@
 }
 
 
-.modal-btn{
+.modal-done-btn{
   padding: 0.6rem 1.4rem;
   font-size: 1.4rem;
   border: none;
-  border-radius: 0.3rem;
-  background-color: #212121;
+  border-radius: 10px;
+  background-color: green;
   color: #fff;
   cursor: pointer;
   font-family: sans-serif;
   transform: scale(0.9);
+  transition: all 0.5s ease;
+}
 
+.modal-done-btn:hover{
+  transition: all 0.4s ease;
+  transform: translate3D(0,-1px,0) scale(1);
+}
+
+.modal-notdone-btn{
+  padding: 0.6rem 1.4rem;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 10px;
+  background-color: red;
+  color: #fff;
+  cursor: pointer;
+  font-family: sans-serif;
+  transform: scale(0.9);
+  transition: all 0.5s ease;
+}
+
+.modal-notdone-btn:hover{
+  transition: all 0.4s ease;
+  transform: translate3D(0,-1px,0) scale(1);
+}
+
+.button-for-card{
+  display: flex;
 }

@@ -12,31 +12,29 @@ const HomePage = () => {
     setShowModal(false);
   };
 
-
   const Popup = () => {
     return (
       <>
         <div className="modal-wrapper" onClick={closeModal}></div>
         <div className="modal-container">
-          <h2>STAY TUNED</h2>
+          <h2>Emergency contact numbers</h2>
           <p>
             Subscribe to our newsletter and never miss our designs ,latest
             news.etc. Our newsletter is sent once a week, every Monday
           </p>
 
-          <button onClick={closeModal} className="modal-btn">
-            OK
-          </button>
+          <div className="button-for-card">
+            <button onClick={closeModal} className="modal-done-btn">
+              Done
+            </button>
+            <button onClick={closeModal} className="modal-notdone-btn">
+              Not Done
+            </button>
+          </div>
         </div>
       </>
     );
   };
-
-
-
-
-
-  
 
   return (
     <>
@@ -69,8 +67,8 @@ const HomePage = () => {
                 alt="medicine image"
                 className="card-image img-fluid"
                 onClick={() => setShowModal(true)}
-                ></img>
-                {showModal && <Popup />}
+              ></img>
+              {showModal && <Popup />}
             </center>
           </Col>
 
@@ -81,8 +79,8 @@ const HomePage = () => {
                 alt="food image"
                 className="card-image img-fluid"
                 onClick={() => setShowModal(true)}
-                ></img>
-                {showModal && <Popup />}
+              ></img>
+              {showModal && <Popup />}
             </center>
           </Col>
 
@@ -93,8 +91,8 @@ const HomePage = () => {
                 alt="food image"
                 className="card-image img-fluid"
                 onClick={() => setShowModal(true)}
-                ></img>
-                {showModal && <Popup />}
+              ></img>
+              {showModal && <Popup />}
             </center>
           </Col>
         </Row>
