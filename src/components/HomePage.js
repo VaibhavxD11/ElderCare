@@ -13,9 +13,6 @@ const HomePage = () => {
   };
 
 
-
-
-
   const Popup = () => {
     return (
       <>
@@ -67,7 +64,9 @@ const HomePage = () => {
                 src="med.jpg"
                 alt="medicine image"
                 className="card-image img-fluid"
-              ></img>
+                onClick={() => setShowModal(true)}
+                ></img>
+                {showModal && <Popup />}
             </center>
           </Col>
 
@@ -77,7 +76,9 @@ const HomePage = () => {
                 src="food.jpg"
                 alt="food image"
                 className="card-image img-fluid"
-              ></img>
+                onClick={() => setShowModal(true)}
+                ></img>
+                {showModal && <Popup />}
             </center>
           </Col>
 
@@ -87,7 +88,9 @@ const HomePage = () => {
                 src="food.jpg"
                 alt="food image"
                 className="card-image img-fluid"
-              ></img>
+                onClick={() => setShowModal(true)}
+                ></img>
+                {showModal && <Popup />}
             </center>
           </Col>
         </Row>
