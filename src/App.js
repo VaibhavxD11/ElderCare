@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 // import { Switch, Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
 import HomePage from "./components/HomePage";
@@ -56,8 +56,10 @@ const App = () => {
     //     <Route path="/" element={<Home />}></Route>
     //   </Routes>
     // </>
+
+
     
-    <Switch>
+    <Routes>
       <Route exact path="/">
         <Home />
       </Route>
@@ -95,7 +97,7 @@ const App = () => {
         <Footer />
       </Route>
       
-    </Switch>
+    </Routes>
   );
 };
 
