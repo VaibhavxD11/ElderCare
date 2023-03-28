@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+<<<<<<< HEAD
 import Select from 'react-select';
+=======
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+>>>>>>> 1ae95df47cd0654971b57e080158303970b85f56
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./HomePage.css";
 
@@ -13,6 +18,7 @@ const HomeGuardian = () => {
     setShowModal(false);
   };
 
+<<<<<<< HEAD
   const Categories = [
     { label: "Food", value: 1 },
     { label: "Medicine", value: 2 },
@@ -22,10 +28,14 @@ const HomeGuardian = () => {
   ]
 
   const Popup = () => {
+=======
+  const Med = () => {
+>>>>>>> 1ae95df47cd0654971b57e080158303970b85f56
     return (
       <>
         <div className="modal-wrapper" onClick={closeModal}></div>
         <div className="modal-container">
+<<<<<<< HEAD
           <br></br>
           <h3>Details for Elder</h3>
           <form>
@@ -66,6 +76,10 @@ const HomeGuardian = () => {
           </table>
 
           <br></br> */}
+=======
+          <h3>Medicine Logger</h3>
+          
+>>>>>>> 1ae95df47cd0654971b57e080158303970b85f56
           <div className="button-for-card">
             <button onClick={closeModal} className="modal-done-btn">
               Close
@@ -81,7 +95,8 @@ const HomeGuardian = () => {
 
   return (
     <>
-      <Container fluid>
+    <Navbar/>
+    <Container fluid>
         <Row className="main-row-home-1 ">
           {/* //EMERGENCY contact number */}
           <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
@@ -93,7 +108,7 @@ const HomeGuardian = () => {
                 onClick={() => setShowModal(true)}
               ></img>
 
-              {showModal && <Popup />}
+              {showModal && <Med />}
             </center>
           </Col>
 
@@ -105,7 +120,7 @@ const HomeGuardian = () => {
                 className="card-image img-fluid"
                 onClick={() => setShowModal(true)}
               ></img>
-              {showModal && <Popup />}
+              {showModal && <Med />}
             </center>
           </Col>
 
@@ -117,7 +132,7 @@ const HomeGuardian = () => {
                 className="card-image img-fluid"
                 onClick={() => setShowModal(true)}
               ></img>
-              {showModal && <Popup />}
+              {showModal && <Med />}
             </center>
           </Col>
 
@@ -129,7 +144,7 @@ const HomeGuardian = () => {
                 className="card-image img-fluid"
                 onClick={() => setShowModal(true)}
               ></img>
-              {showModal && <Popup />}
+              {showModal && <Med />}
             </center>
           </Col>
 
@@ -142,7 +157,7 @@ const HomeGuardian = () => {
                 className="card-image img-fluid"
                 onClick={() => setShowModal(true)}
               ></img>
-              {showModal && <Popup />}
+              {showModal && <Med />}
             </center>
           </Col>
 
@@ -154,11 +169,13 @@ const HomeGuardian = () => {
                 className="card-image img-fluid"
                 onClick={() => setShowModal(true)}
               ></img>
-              {showModal && <Popup />}
+              {showModal && <Med />}
             </center>
           </Col>
         </Row>
       </Container>
+    <Footer/>
+      
     </>
   );
 };
