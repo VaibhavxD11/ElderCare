@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Select from 'react-select';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./HomePage.css";
 
@@ -12,12 +13,28 @@ const HomeGuardian = () => {
     setShowModal(false);
   };
 
+  const Categories = [
+    { label: "Food", value: 1 },
+    { label: "Medicine", value: 2 },
+    { label: "Checkup", value: 3 },
+    { label: "Phone Number", value: 4 },
+    { label: "Excerise", value: 5 }
+  ]
+
   const Popup = () => {
     return (
       <>
         <div className="modal-wrapper" onClick={closeModal}></div>
         <div className="modal-container">
-          <h2>Emergency Contact Numbers</h2>
+          <br></br>
+          <h3>Details for Elder</h3>
+          <form>
+            <label>
+              <span>Select Category</span>
+              <Select options={techCompanies} />
+            </label>
+          </form>
+          {/* <h2>Emergency Contact Numbers</h2>
 
           <br></br>
           <table id="customers">
@@ -48,7 +65,7 @@ const HomeGuardian = () => {
             </tr>
           </table>
 
-          <br></br>
+          <br></br> */}
           <div className="button-for-card">
             <button onClick={closeModal} className="modal-done-btn">
               Close
@@ -58,6 +75,9 @@ const HomeGuardian = () => {
       </>
     );
   };
+
+
+  
 
   return (
     <>
