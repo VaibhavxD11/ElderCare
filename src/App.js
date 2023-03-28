@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer"
 import { Switch, Route } from "react-router-dom";
 // import { Switch, Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
@@ -53,49 +53,45 @@ const App = () => {
     //     <Route path="/" element={<Home />}></Route>
     //   </Routes>
     // </>
-
+    
     <Switch>
       <Route exact path="/">
         <Home />
       </Route>
-
+      
       <Route path="/about">
-        <Navbar />
+        <Navbar/>
         <About />
-        <Footer />
+        <Footer/>
       </Route>
 
       <Route path="/contact">
         <Navbar />
-        <ContactForm />
+        <ContactForm/>
         <Footer />
       </Route>
 
       <Route path="/news">
-        <News />
+        <News/>
       </Route>
 
       <Route path="/login">
-        <Navbar />
+        <Navbar/>
         <Login />
-        <Footer />
+        <Footer/>
       </Route>
 
       <Route path="/homepage">
-        <Navbar />
+        <Navbar/>
         <HomePage />
-        <Footer />
+        <Footer/>
       </Route>
       <Route path="/signup">
         <Navbar />
-        <Signup />
+        <Signup/>
         <Footer />
       </Route>
-      <Route path="/HomeGuardian">
-        <Navbar />
-        <HomeGuardian />
-        <Footer />
-      </Route>
+      
     </Switch>
   );
 };
