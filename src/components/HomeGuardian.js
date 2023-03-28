@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./HomePage.css";
 
-const HomePage = () => {
+const HomeGuardian = () => {
   const [showModal, setShowModal] = useState(false);
 
   const closeModal = () => {
@@ -143,4 +143,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default HomeGuardian;
