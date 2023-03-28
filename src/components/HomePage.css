@@ -2,6 +2,8 @@
   margin: 20px 20px;
   /* background-color: brown; */
   width: auto;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
 .card {
@@ -11,15 +13,10 @@
 
 .card:hover {
   transition: all 0.4s ease;
-  transform: translate3D(0,-1px,0) scale(1.20);
+  transform: translate3D(0, -1px, 0) scale(1.2);
 }
 
-
-
-
-
-
-.card-image{
+.card-image {
   height: 300px;
   width: 300px;
   transition: all 0.5s ease;
@@ -31,32 +28,13 @@
 
 .card-image:hover {
   transition: all 0.4s ease;
-  transform: translate3D(0,-1px,0) scale(1.20);
+  transform: translate3D(0, -1px, 0) scale(1.2);
   cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* THIS IS THE CSS FOR POPUP OF THE CARDS  */
 
-
-
-.modal-wrapper{
+.modal-wrapper {
   position: fixed;
   left: 0;
   right: 0;
@@ -65,20 +43,19 @@
   background-color: rgba(189, 189, 189, 0.9);
 }
 
-.modal-container{
+.modal-container {
   position: fixed;
-  top: 50%;
+  top: 60%;
   left: 50%;
-  transform: translate(-50% , -50%);
-  max-width: 50rem;
+  transform: translate(-50%, -50%);
+  min-width: 100rem;
   max-height: 50rem;
-  padding: 2rem  3rem;
+  padding: 3rem 3rem;
   border-radius: 0.5rem;
   background-color: #fff;
 }
 
-
-.modal-done-btn{
+.modal-done-btn {
   padding: 0.6rem 1.4rem;
   font-size: 1.4rem;
   border: none;
@@ -91,12 +68,12 @@
   transition: all 0.5s ease;
 }
 
-.modal-done-btn:hover{
+.modal-done-btn:hover {
   transition: all 0.4s ease;
-  transform: translate3D(0,-1px,0) scale(1);
+  transform: translate3D(0, -1px, 0) scale(1);
 }
 
-.modal-notdone-btn{
+.modal-notdone-btn {
   padding: 0.6rem 1.4rem;
   font-size: 1.4rem;
   border: none;
@@ -109,11 +86,43 @@
   transition: all 0.5s ease;
 }
 
-.modal-notdone-btn:hover{
+.modal-notdone-btn:hover {
   transition: all 0.4s ease;
-  transform: translate3D(0,-1px,0) scale(1);
+  transform: translate3D(0, -1px, 0) scale(1);
 }
 
-.button-for-card{
+.button-for-card {
   display: flex;
 }
+
+
+
+
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border-radius: 20%;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: orange;
+  
+  color: white;
+}
+
+

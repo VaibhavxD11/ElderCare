@@ -18,17 +18,40 @@ const HomePage = () => {
         <div className="modal-wrapper" onClick={closeModal}></div>
         <div className="modal-container">
           <h2>Emergency contact numbers</h2>
-          <p>
-            Subscribe to our newsletter and never miss our designs ,latest
-            news.etc. Our newsletter is sent once a week, every Monday
-          </p>
 
+          <br></br>
+          <table id="customers">
+            <tr>
+              <th>Name</th>
+              <th>Contact No.</th>
+              <th>Location</th>
+            </tr>
+            <tr>
+              <td>Police (cops)</td>
+              <td>100</td>
+              <td>Jaipur</td>
+            </tr>
+            <tr>
+              <td>Ambulance</td>
+              <td>102</td>
+              <td>Jodhpur</td>
+            </tr>
+            <tr>
+              <td>Doctor</td>
+              <td>8797988979</td>
+              <td>Delhi</td>
+            </tr>
+            <tr>
+              <td>Fire / rescue</td>
+              <td>101</td>
+              <td>Andhra pradesh</td>
+            </tr>
+          </table>
+
+          <br></br>
           <div className="button-for-card">
             <button onClick={closeModal} className="modal-done-btn">
-              Done
-            </button>
-            <button onClick={closeModal} className="modal-notdone-btn">
-              Not Done
+              Close
             </button>
           </div>
         </div>
@@ -53,12 +76,6 @@ const HomePage = () => {
               {showModal && <Popup />}
             </center>
           </Col>
-
-          {/* <div>
-            
-          </div> */}
-
-          {/* Medicine */}
 
           <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
             <center>
@@ -87,7 +104,7 @@ const HomePage = () => {
           <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
             <center>
               <img
-                src="food.jpg"
+                src="checkup.png"
                 alt="food image"
                 className="card-image img-fluid"
                 onClick={() => setShowModal(true)}

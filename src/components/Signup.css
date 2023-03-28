@@ -30,12 +30,12 @@ button {
   text-align: center;
 }
 
-.cont {
+.signup_cont {
   border-radius: 20px;
   overflow: hidden;
   position: relative;
   width: 900px;
-  height: 550px;
+  height: 715px;
   margin: 0 auto 100px;
   background: #fff;
   box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.3),
