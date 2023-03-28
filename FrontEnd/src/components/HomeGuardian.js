@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./HomePage.css";
 
-const HomePage = () => {
+const HomeGuardian = () => {
   const [showModal, setShowModal] = useState(false);
 
   const closeModal = () => {
@@ -17,7 +15,6 @@ const HomePage = () => {
   const Popup = () => {
     return (
       <>
-        
         <div className="modal-wrapper" onClick={closeModal}></div>
         <div className="modal-container">
           <h2>Emergency Contact Numbers</h2>
@@ -58,14 +55,12 @@ const HomePage = () => {
             </button>
           </div>
         </div>
-        
       </>
     );
   };
 
   return (
     <>
-      <Navbar/>
       <Container fluid>
         <Row className="main-row-home-1 ">
           {/* //EMERGENCY contact number */}
@@ -144,9 +139,8 @@ const HomePage = () => {
           </Col>
         </Row>
       </Container>
-      <Footer/>
     </>
   );
 };
 
-export default HomePage;
+export default HomeGuardian;
