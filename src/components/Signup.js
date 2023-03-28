@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./Signup.css";
 
 const Signup = () => {
+
   const [toggle, setToggle] = useState(false);
   return (
     <div className="signup-form">
@@ -11,7 +12,7 @@ const Signup = () => {
           <h2>Signup for Guardian</h2>
           <label>
             <span>Guardian Name</span>
-            <input type="text" />
+            <input type="text" id="name"  />
           </label>
           <label>
             <span>Elder Name</span>
