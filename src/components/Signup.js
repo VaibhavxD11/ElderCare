@@ -6,7 +6,7 @@ const Signup = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <div className="signup-form">
-      <div class={`cont ${toggle ? "s--signup" : ""}`}>
+      <div class={"signup_cont"}>
         <div class="loginform sign-in">
           <h2>Signup for Guardian</h2>
           <label>
@@ -23,6 +23,15 @@ const Signup = () => {
           </label>
           <label>
             <span>Password</span>
+            <input type="Password" />
+          </label>
+          <label>
+            <span>Mobile No.</span>
+            <input type="Integer" />
+          </label>
+
+          <label>
+            <span>Guardian Mail</span>
             <input type="text" />
           </label>
           <button type="button" class="submit">
