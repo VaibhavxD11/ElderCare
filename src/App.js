@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer"
-import { Switch, Route } from "react-router-dom";
-// import { Switch, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
+// import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
 import HomePage from "./components/HomePage";
 import About from "./components/About";
@@ -51,51 +51,57 @@ const Contact = () => {
 
 const App = () => {
   return (
-    // <>
-    //   <Routes>
-    //     <Route path="/" element={<Home />}></Route>
-    //   </Routes>
-    // </>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/contact" element={<ContactForm />}></Route>
+        <Route path="/news" element={<News />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/signup" element={<Signup />}></Route>
+        <Route path="/homepage" element={<HomePage />}></Route>
+      </Routes>
+    </>
     
-    <Switch>
-      <Route exact path="/">
-        <Home />
-      </Route>
+    // <Switch>
+    //   <Route exact path="/">
+    //     <Home />
+    //   </Route>
       
-      <Route path="/about">
-        <Navbar/>
-        <About />
-        <Footer/>
-      </Route>
+    //   <Route path="/about">
+    //     <Navbar/>
+    //     <About />
+    //     <Footer/>
+    //   </Route>
 
-      <Route path="/contact">
-        <Navbar />
-        <ContactForm/>
-        <Footer />
-      </Route>
+    //   <Route path="/contact">
+    //     <Navbar />
+    //     <ContactForm/>
+    //     <Footer />
+    //   </Route>
 
-      <Route path="/news">
-        <News/>
-      </Route>
+    //   <Route path="/news">
+    //     <News/>
+    //   </Route>
 
-      <Route path="/login">
-        <Navbar/>
-        <Login />
-        <Footer/>
-      </Route>
+    //   <Route path="/login">
+    //     <Navbar/>
+    //     <Login />
+    //     <Footer/>
+    //   </Route>
 
-      <Route path="/homepage">
-        <Navbar/>
-        <HomePage />
-        <Footer/>
-      </Route>
-      <Route path="/signup">
-        <Navbar />
-        <Signup/>
-        <Footer />
-      </Route>
+    //   <Route path="/homepage">
+    //     <Navbar/>
+    //     <HomePage />
+    //     <Footer/>
+    //   </Route>
+    //   <Route path="/signup">
+    //     <Navbar />
+    //     <Signup/>
+    //     <Footer />
+    //   </Route>
       
-    </Switch>
+    // </Switch>
   );
 };
 
