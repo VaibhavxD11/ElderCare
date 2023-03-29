@@ -2,12 +2,9 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-<<<<<<< HEAD
-import Select from 'react-select';
-=======
+import Select from "react-select";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
->>>>>>> 1ae95df47cd0654971b57e080158303970b85f56
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./HomePage.css";
 
@@ -18,68 +15,27 @@ const HomeGuardian = () => {
     setShowModal(false);
   };
 
-<<<<<<< HEAD
   const Categories = [
     { label: "Food", value: 1 },
     { label: "Medicine", value: 2 },
     { label: "Checkup", value: 3 },
     { label: "Phone Number", value: 4 },
-    { label: "Excerise", value: 5 }
-  ]
+    { label: "Excerise", value: 5 },
+  ];
 
-  const Popup = () => {
-=======
   const Med = () => {
->>>>>>> 1ae95df47cd0654971b57e080158303970b85f56
     return (
       <>
         <div className="modal-wrapper" onClick={closeModal}></div>
         <div className="modal-container">
-<<<<<<< HEAD
           <br></br>
           <h3>Details for Elder</h3>
           <form>
             <label>
               <span>Select Category</span>
-              <Select options={techCompanies} />
+              <Select options={Categories} />
             </label>
           </form>
-          {/* <h2>Emergency Contact Numbers</h2>
-
-          <br></br>
-          <table id="customers">
-            <tr>
-              <th>Name</th>
-              <th>Contact No.</th>
-              <th>Location</th>
-            </tr>
-            <tr>
-              <td>Police (cops)</td>
-              <td>100</td>
-              <td>Jaipur</td>
-            </tr>
-            <tr>
-              <td>Ambulance</td>
-              <td>102</td>
-              <td>Jodhpur</td>
-            </tr>
-            <tr>
-              <td>Doctor</td>
-              <td>8797988979</td>
-              <td>Delhi</td>
-            </tr>
-            <tr>
-              <td>Fire / rescue</td>
-              <td>101</td>
-              <td>Andhra pradesh</td>
-            </tr>
-          </table>
-
-          <br></br> */}
-=======
-          <h3>Medicine Logger</h3>
-          
->>>>>>> 1ae95df47cd0654971b57e080158303970b85f56
           <div className="button-for-card">
             <button onClick={closeModal} className="modal-done-btn">
               Close
@@ -90,13 +46,10 @@ const HomeGuardian = () => {
     );
   };
 
-
-  
-
   return (
     <>
-    <Navbar/>
-    <Container fluid>
+      <Navbar />
+      <Container fluid>
         <Row className="main-row-home-1 ">
           {/* //EMERGENCY contact number */}
           <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
@@ -107,7 +60,6 @@ const HomeGuardian = () => {
                 className="card-image img-fluid"
                 onClick={() => setShowModal(true)}
               ></img>
-
               {showModal && <Med />}
             </center>
           </Col>
@@ -148,7 +100,6 @@ const HomeGuardian = () => {
             </center>
           </Col>
 
-
           <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
             <center>
               <img
@@ -174,8 +125,7 @@ const HomeGuardian = () => {
           </Col>
         </Row>
       </Container>
-    <Footer/>
-      
+      <Footer />
     </>
   );
 };
