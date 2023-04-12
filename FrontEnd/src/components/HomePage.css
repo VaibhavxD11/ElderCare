@@ -34,62 +34,7 @@
 
 /* THIS IS THE CSS FOR POPUP OF THE CARDS  */
 
-.modal-wrapper {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  background-color: rgba(189, 189, 189, 0.9);
-}
 
-.modal-container {
-  position: fixed;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100rem;
-  max-height: 50rem;
-  padding: 3rem 3rem;
-  border-radius: 0.5rem;
-  background-color: #fff;
-}
-
-.modal-done-btn {
-  padding: 0.6rem 1.4rem;
-  font-size: 1.4rem;
-  border: none;
-  border-radius: 10px;
-  background-color: red;
-  color: #fff;
-  cursor: pointer;
-  font-family: sans-serif;
-  transform: scale(0.9);
-  transition: all 0.5s ease;
-}
-
-.modal-done-btn:hover {
-  transition: all 0.4s ease;
-  transform: translate3D(0, -1px, 0) scale(1);
-}
-
-.modal-notdone-btn {
-  padding: 0.6rem 1.4rem;
-  font-size: 1.4rem;
-  border: none;
-  border-radius: 10px;
-  background-color: red;
-  color: #fff;
-  cursor: pointer;
-  font-family: sans-serif;
-  transform: scale(0.9);
-  transition: all 0.5s ease;
-}
-
-.modal-notdone-btn:hover {
-  transition: all 0.4s ease;
-  transform: translate3D(0, -1px, 0) scale(1);
-}
 
 .button-for-card {
   display: flex;
@@ -125,4 +70,163 @@
   color: white;
 }
 
+
+.close-button{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  width: 100px;
+  height: 40px;
+  transition: all 0.5s ease;
+}
+
+.close-button:hover{
+  transition: all 0.4s ease;
+  transform: translate3D(0, -1px, 0) scale(1.2);
+}
+
+
+
+#sostext{
+  font-size: 20px;
+}
+
+#done-button{
+  background-color: green; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 100px;
+  height: 40px;
+  transition: all 0.5s ease; 
+}
+
+
+#submit-button{
+
+  color: white;
+  background-color: #084cdf;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  width: 130px;
+  height: 40px;
+  transition: all 0.5s ease;
+  border-radius: 10px;
+
+}
+
+#submit-button:hover{
+  background-color: #0d45a5;
+  
+}
+
+
+
+.input-upload{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+}
+
+input[type=file] {
+  width: 350px;
+  max-width: 100%;
+  color: #444;
+  padding: 4px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #555;
+}
+
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #084cdf;
+  padding: 5px 8px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type=file]::file-selector-button:hover {
+  background: #0d45a5;
+}
+
+
+.image-upload{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#med-input{
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 35px;
+  width: 50%;
+}
+
+#med-label{
+  align-items: left;
+}
+
+.dose-radio-button-class{
+  display: flex;
+}
+
+.time-checkbox-button-class{
+  display: flex;
+}
+
+.med-name-class{
+  display: flex;
+  align-items: left;
+}
+
+#dish-input{
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 35px;
+  width: 100%;
+}
+
+
+.dish-input{
+  display: flex;
+}
+
+.dishes{
+  display: flex;
+
+}
+
+
+#handled-input{
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 35px;
+  width: 100%;
+}
+
+#profileimage{
+  height: 30px;
+  width: 30px;
+  float: right;
+}
 

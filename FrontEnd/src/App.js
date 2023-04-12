@@ -10,6 +10,7 @@ import About from "./components/About";
 import ContactForm from "./components/ContactForm";
 import Signup from "./components/Signup";
 import HomeGuardian from "./components/HomeGuardian";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Home = () => {
   return (
@@ -18,7 +19,7 @@ const Home = () => {
       <section className="hero-section">
         <p>Welcome To</p>
         <a href="/">
-          <img src="image.jpg" height="300px" width="300px"></img>
+          <img src="image.jpg" class="img-fluid; " style={{maxHeight:"320px",maxWidth:"100%"}}></img>
         </a>
         <h1>Support You</h1>
       </section>
@@ -31,7 +32,13 @@ const News = () => {
   return (
     <>
       <Navbar />
-      <section className="hero-section"></section>
+      <section className="hero-section">
+        <p>Welcome To</p>
+        <a href="/">
+          <img src="image.jpg" class="img-fluid; " style={{maxHeight:"320px",maxWidth:"100%"}}></img>
+        </a>
+        <h1>News</h1>
+      </section>
       <Footer />
     </>
   );

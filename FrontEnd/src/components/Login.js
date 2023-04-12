@@ -44,11 +44,11 @@ const Login = () => {
             <div class="loginform sign-up">
               <h2>Login as Guardian</h2>
               <label>
-                <span>Guardian Name</span>
-                <input type="text" />
+                <span>Guardian Email</span>
+                <input type="email" />
               </label>
               <label>
-                <span>Elder Name</span>
+                <span>Guardian Name</span>
                 <input type="text" />
               </label>
               <label>

@@ -24,7 +24,7 @@ function About() {
                         </div>
 
                         <div className='image'>
-                            <h3>About Us</h3>
+                            <h3 id = "text">About Us</h3>
                             <img src="aboutimage.jpeg" alt="elder image" height="400px" width="300px"></img>
                         </div>
                     </div>
