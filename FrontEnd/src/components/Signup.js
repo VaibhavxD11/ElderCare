@@ -133,6 +133,7 @@ const Signup = () => {
                 Sign up
               </button>
             </div>
+
             <div class="sub-cont">
               <div class="img">
                 <div class="signup__text m--up">

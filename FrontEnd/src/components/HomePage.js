@@ -6,15 +6,21 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./HomePage.css";
-<<<<<<< HEAD
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Modal, ModalBody, ModalHeader } from "reactstrap";
 import axios from "axios";
 import "./toast.css";
 
 
 const HomePage = () => {
-
+  const [Sosmodal, setSosmodal] = useState(false);
+  const [Medmodal, setMedmodal] = useState(false);
+  const [Foodmodal, setFoodmodal] = useState(false);
+  const [Checkupmodal, setCheckupmodal] = useState(false);
+  const [Familymodal, setFamilymodal] = useState(false);
+  const [Yogamodal, setYogamodal] = useState(false);
+  
   
   useEffect(() => {
     toast.success('Login Success !', {
@@ -193,21 +199,8 @@ const HomePage = () => {
         <ToastContainer />
       </div>
       <Navbar/>
-=======
-import { Modal, ModalBody, ModalHeader } from "reactstrap";
 
-function HomePage() {
-  const [Sosmodal, setSosmodal] = useState(false);
-  const [Medmodal, setMedmodal] = useState(false);
-  const [Foodmodal, setFoodmodal] = useState(false);
-  const [Checkupmodal, setCheckupmodal] = useState(false);
-  const [Familymodal, setFamilymodal] = useState(false);
-  const [Yogamodal, setYogamodal] = useState(false);
-
-  return (
-    <>
-      <Navbar />
->>>>>>> b613145826c5f08d1f0af562e4549958e633395a
+      
       <Container fluid>
         <Row className="row-prof">
           <Col className="col-prof align-self-end">

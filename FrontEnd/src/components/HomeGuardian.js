@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -9,17 +9,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./HomePage.css";
 import { Modal, ModalBody, ModalHeader } from "reactstrap";
 import { DropdownButton, Dropdown } from "react-bootstrap";
-import ReactDOM from "react-dom";
 
 const HomeGuardian = () => {
 
 
   const imageprofile = () => {
-      <DropdownButton title="Dropdown">
-        <Dropdown.Item>Option 1</Dropdown.Item>
-        <Dropdown.Item>Option 2</Dropdown.Item>
-        <Dropdown.Item>Option 3</Dropdown.Item>
-      </DropdownButton>
+    <DropdownButton title="Dropdown">
+      <Dropdown.Item>Option 1</Dropdown.Item>
+      <Dropdown.Item>Option 2</Dropdown.Item>
+      <Dropdown.Item>Option 3</Dropdown.Item>
+    </DropdownButton>
   }
 
   const [Sosmodal, setSosmodal] = useState(false);
@@ -89,15 +88,6 @@ const HomeGuardian = () => {
       <Container fluid>
         <Row className="main-row-home-1 ">
           {/* //EMERGENCY contact number */}
-
-          <div>
-            <img src="profile.png"
-            alt = "profile"
-            onClick={imageprofile}
-            id="profileimage">
-            </img>
-          </div>
-
           <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
             {/* //this is the popup */}
 
@@ -146,7 +136,6 @@ const HomeGuardian = () => {
                   </table>
                   <br></br>
                 </div>
-              </ModalBody>
               <button
                 type="button"
                 className="close-button"
@@ -155,6 +144,8 @@ const HomeGuardian = () => {
                 Close
               </button>
               <br></br>
+              </ModalBody>
+
             </Modal>
 
             <center>
@@ -458,12 +449,12 @@ const HomeGuardian = () => {
 
                     <br></br>
 
-                    <button  id="submit-button">
+                    <button id="submit-button">
                       Upload image
                     </button>
                   </div>
 
-                  
+
 
                   <br></br>
 

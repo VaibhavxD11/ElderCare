@@ -29,7 +29,6 @@ const Home = () => {
   );
 };
 
-<<<<<<< HEAD
 // const News = () => {
 //   return (
 //     <>
@@ -39,23 +38,21 @@ const Home = () => {
 //     </>
 //   );
 // };
-=======
-const News = () => {
-  return (
-    <>
-      <Navbar />
-      <section className="hero-section">
-        <p>Welcome To</p>
-        <a href="/">
-          <img src="image.jpg" class="img-fluid; " style={{maxHeight:"320px",maxWidth:"100%"}}></img>
-        </a>
-        <h1>News</h1>
-      </section>
-      <Footer />
-    </>
-  );
-};
->>>>>>> b613145826c5f08d1f0af562e4549958e633395a
+// const News = () => {
+//   return (
+//     <>
+//       <Navbar />
+//       <section className="hero-section">
+//         <p>Welcome To</p>
+//         <a href="/">
+//           <img src="image.jpg" class="img-fluid; " style={{maxHeight:"320px",maxWidth:"100%"}}></img>
+//         </a>
+//         <h1>News</h1>
+//       </section>
+//       <Footer />
+//     </>
+//   );
+// };
 
 const Contact = () => {
   return (

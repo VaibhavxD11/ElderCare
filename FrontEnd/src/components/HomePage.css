@@ -65,7 +65,6 @@
 /* THIS IS THE CSS FOR POPUP OF THE CARDS  */
 
 
-<<<<<<< HEAD
 .modal-wrapper-prof{
   position: fixed;
   left: 0;
@@ -134,8 +133,6 @@
   transition: all 0.4s ease;
   transform: translate3D(0, -1px, 0) scale(1);
 }
-=======
->>>>>>> b613145826c5f08d1f0af562e4549958e633395a
 
 .button-for-card {
   display: flex;
