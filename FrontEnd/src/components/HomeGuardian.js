@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
+import { Modal, ModalBody, ModalHeader } from "reactstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 // import Select from 'react-select';
@@ -7,19 +8,8 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./HomePage.css";
-import { Modal, ModalBody, ModalHeader } from "reactstrap";
-import { DropdownButton, Dropdown } from "react-bootstrap";
 
 const HomeGuardian = () => {
-
-
-  const imageprofile = () => {
-    <DropdownButton title="Dropdown">
-      <Dropdown.Item>Option 1</Dropdown.Item>
-      <Dropdown.Item>Option 2</Dropdown.Item>
-      <Dropdown.Item>Option 3</Dropdown.Item>
-    </DropdownButton>
-  }
 
   const [Sosmodal, setSosmodal] = useState(false);
   const [Medmodal, setMedmodal] = useState(false);
@@ -161,7 +151,7 @@ const HomeGuardian = () => {
           {/* this is the medicine logger */}
           <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
             {/* this is the popup for the medicine logger */}
-            <Modal
+            {/* <Modal
               size="lg"
               isOpen={Medmodal}
               toggle={() => setMedmodal(!Medmodal)}
@@ -239,7 +229,7 @@ const HomeGuardian = () => {
                   </button>
                 </form>
               </ModalBody>
-            </Modal>
+            </Modal> */}
 
             <center>
               <img
