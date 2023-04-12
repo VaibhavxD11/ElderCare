@@ -116,6 +116,7 @@ const Login = () => {
               <br></br>
               <center><span>{errText}</span></center>
               <label>
+<<<<<<< HEAD
                 <span>id</span>
                 <input type="integer"
                   onChange={handleEChange}
@@ -125,6 +126,20 @@ const Login = () => {
                 />
               </label>
               <button type="button" class="submit" onClick={handleESubmit}>
+=======
+                <span>Guardian Email</span>
+                <input type="email" />
+              </label>
+              <label>
+                <span>Guardian Name</span>
+                <input type="text" />
+              </label>
+              <label>
+                <span>Password</span>
+                <input type="password" />
+              </label>
+              <button type="button" class="submit">
+>>>>>>> b613145826c5f08d1f0af562e4549958e633395a
                 Sign In
               </button>
             </div>

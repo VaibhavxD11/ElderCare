@@ -1,7 +1,14 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "jsonwebtoken": "^9.0.0",
     "react-select": "^5.7.2",
     "reactstrap": "^9.1.8"
+=======
+    "firebase": "^9.19.1",
+    "mongoose": "^7.0.3",
+    "react-select": "^5.7.2",
+    "uuid": "^9.0.0"
+>>>>>>> b613145826c5f08d1f0af562e4549958e633395a
   }
 }
