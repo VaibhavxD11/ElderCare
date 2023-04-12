@@ -1,15 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-<<<<<<< HEAD
-import Select from 'react-select';
-=======
+// import Select from 'react-select';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
->>>>>>> 1ae95df47cd0654971b57e080158303970b85f56
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./HomePage.css";
+import Select from 'react-select';
+
+function select() {
+  let options = [{ label: "One", value: "one" }, { label: "Two", value: "two" }, { label: "Three", value: "three" }]
+  return (
+    <Select options={options}
+      defaultValue={{ label: "Choose one", value: "" }}></Select>
+  )
+}
 
 const HomeGuardian = () => {
   const [showModal, setShowModal] = useState(false);
@@ -18,30 +24,57 @@ const HomeGuardian = () => {
     setShowModal(false);
   };
 
-<<<<<<< HEAD
   const Categories = [
     { label: "Food", value: 1 },
     { label: "Medicine", value: 2 },
     { label: "Checkup", value: 3 },
     { label: "Phone Number", value: 4 },
-    { label: "Excerise", value: 5 }
+    { label: "Exercise", value: 5 }
   ]
 
-  const Popup = () => {
-=======
+
+  useEffect(() => {
+    if (!window.isLoggedIn) {
+      window.location.replace('/login'); // Replace with your desired page URL
+    }
+
+  }, [window.isLoggedIn]);
+
+  useEffect(() => {
+    window.history.pushState(null, null, window.location.pathname);
+    window.addEventListener('popstate', onBackButtonEvent);
+
+    return () => {
+      window.removeEventListener('popstate', onBackButtonEvent);
+    };
+  }, []);
+
+  const onBackButtonEvent = (e) => {
+    e.preventDefault();
+    window.history.pushState(null, null, window.location.pathname);
+  };
+
+  window.signout = true;
+
   const Med = () => {
->>>>>>> 1ae95df47cd0654971b57e080158303970b85f56
     return (
       <>
         <div className="modal-wrapper" onClick={closeModal}></div>
         <div className="modal-container">
-<<<<<<< HEAD
-          <br></br>
+          {/* <br></br> */}
           <h3>Details for Elder</h3>
           <form>
             <label>
               <span>Select Category</span>
-              <Select options={techCompanies} />
+              <br></br>
+              {/* <select>
+                <option>Food</option>
+                <option>Medicine</option>
+                <option>Exercise</option>
+                <option>Checkup</option>
+                <option>Phone Number</option>
+              </select> */}
+              {/* <Select options={Categories} /> */}
             </label>
           </form>
           {/* <h2>Emergency Contact Numbers</h2>
@@ -75,11 +108,9 @@ const HomeGuardian = () => {
             </tr>
           </table>
 
-          <br></br> */}
-=======
-          <h3>Medicine Logger</h3>
+          <br></br> }
+    <h3>Medicine Logger</h3> */}
           
->>>>>>> 1ae95df47cd0654971b57e080158303970b85f56
           <div className="button-for-card">
             <button onClick={closeModal} className="modal-done-btn">
               Close

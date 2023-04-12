@@ -2,8 +2,31 @@ import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
+
+  var toggle = window.signout;
+  var text = "Login/SignUp";
+  if (toggle) {
+    text = "SignOut";
+  }
+
+  function changeState() {
+    window.location.reload();
+    window.location.replace('/login');
+  }
+
+  const [loggedIn, setLoggedIn] = useState(false);
+  function handleLogIn() {
+    toggle = false;
+    setLoggedIn(true);
+  }
+  function handleLogOut() {
+    toggle = false;
+    setLoggedIn(false);
+  }
+
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   return (
     <>
@@ -30,11 +53,24 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink to="/login">
-                <button type="button" class="btn btn-warning-outline button-login" >Login/SignUp</button>
+                {/* {toggle ? (
+                  <button class="btn btn-warning-outline button-login" onClick={handleLogOut}>Sign out</button>
+                ) : (
+                    <button class="btn btn-warning-outline button-login" onClick={handleLogIn}>Login/SignUp</button>
+                )} */}
+
+                <button type="button" class="btn btn-warning-outline button-login" onClick={changeState} >{text}</button>
               </NavLink>
             </li>
           </ul>
         </div>
+
+        {/* <div className="hamburger-menu">
+          <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
+            <GiHamburgerMenu />
+          </a>
+        </div> */}
+
       </nav>
     </>
   );

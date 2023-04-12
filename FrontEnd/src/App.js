@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import HomePage from "./components/HomePage";
 import About from "./components/About";
+import News from "./components/News";
 import ContactForm from "./components/ContactForm";
 import Signup from "./components/Signup";
 import HomeGuardian from "./components/HomeGuardian";
@@ -27,15 +28,15 @@ const Home = () => {
   );
 };
 
-const News = () => {
-  return (
-    <>
-      <Navbar />
-      <section className="hero-section"></section>
-      <Footer />
-    </>
-  );
-};
+// const News = () => {
+//   return (
+//     <>
+//       <Navbar />
+//       <section className="hero-section"></section>
+//       <Footer />
+//     </>
+//   );
+// };
 
 const Contact = () => {
   return (

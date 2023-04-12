@@ -6,6 +6,19 @@
   padding-bottom: 35px;
 }
 
+.row-prof{
+  margin:auto;
+  background-color: rgb(228, 222, 211);
+  width: auto;
+  padding-bottom: 1px;
+}
+
+.col-prof{
+  align-items: right;
+  /* background-color: rgb(244, 248, 252); */
+  background-color: ghostwhite;
+}
+
 .card {
   transition: all 0.5s ease;
   margin: 20px auto;
@@ -26,15 +39,41 @@
   box-shadow: 0 0 10px 1px grey;
 }
 
+.card-image-prof{
+  transition: all 0.5s ease;
+  margin: 15px 62px;
+  align-content: right;
+  float: right;
+  /* border: 2px solid black; */
+  border-radius: 50%;
+  box-shadow: 0 0 10px 1px rgb(63, 62, 62);
+}
+
 .card-image:hover {
   transition: all 0.4s ease;
   transform: translate3D(0, -1px, 0) scale(1.2);
   cursor: pointer;
 }
 
+.card-image-prof:hover{
+  transition: all 0.4s ease;
+  transform: translate3D(0, -1px, 0) scale(1.03);
+  cursor: pointer;
+  box-shadow: 0 0 10px 1px rgb(0, 0, 0);
+}
+
 /* THIS IS THE CSS FOR POPUP OF THE CARDS  */
 
 .modal-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(189, 189, 189, 0.9);
+}
+
+.modal-wrapper-prof{
   position: fixed;
   left: 0;
   right: 0;
@@ -50,6 +89,18 @@
   transform: translate(-50%, -50%);
   min-width: 100rem;
   max-height: 50rem;
+  padding: 3rem 3rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+.modal-container-prof{
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 15rem;
+  max-height: 25rem;
   padding: 3rem 3rem;
   border-radius: 0.5rem;
   background-color: #fff;
