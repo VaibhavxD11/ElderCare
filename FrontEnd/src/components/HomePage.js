@@ -11,16 +11,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Modal, ModalBody, ModalHeader } from "reactstrap";
 import axios from "axios";
 import "./toast.css";
+import { Modal, ModalBody, ModalHeader } from "reactstrap";
 
 
 const HomePage = () => {
-  const [Sosmodal, setSosmodal] = useState(false);
-  const [Medmodal, setMedmodal] = useState(false);
-  const [Foodmodal, setFoodmodal] = useState(false);
-  const [Checkupmodal, setCheckupmodal] = useState(false);
-  const [Familymodal, setFamilymodal] = useState(false);
-  const [Yogamodal, setYogamodal] = useState(false);
-  
+
   
   useEffect(() => {
     toast.success('Login Success !', {
