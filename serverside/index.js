@@ -45,7 +45,20 @@ app.use(require("./routes/users"));
 app.use(require("./routes/auth"));
 app.use(require("./routes/authCtrl"));
 app.use(require("./routes/yoga"));
+app.use(require("./routes/food"));
+app.use(require("./routes/med"));
+app.use(require("./routes/checkup"));
+app.use(require("./routes/number"));
 app.use(require("./routes/userdetails"));
+app.use(require("./routes/guserdetails"));
+app.use(require("./routes/yform"));
+app.use(require("./routes/cform"));
+app.use(require("./routes/mform"));
+app.use(require("./routes/nform"));
+app.use(require("./routes/fform"));
+
+
+
 
 const { isAuth } = require('./middleware/auth');
 

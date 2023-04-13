@@ -13,6 +13,7 @@ import "./toast.css";
 import { Modal, ModalBody, ModalHeader } from "reactstrap";
 
 
+
 const HomePage = () => {
 
   const [Sosmodal, setSosmodal] = useState(false);
@@ -38,7 +39,7 @@ const HomePage = () => {
 
 
   const [Edata, setEData] = useState({
-    id: window.Eusername
+    id: window.useruid
   });
 
 
@@ -58,7 +59,7 @@ const HomePage = () => {
         }
       };
       fetchUser();
-    }, [window.Eusername]);
+    }, [window.useruid]);
 
     if (loading) {
       return null;
@@ -73,11 +74,243 @@ const HomePage = () => {
     window.elderName = user.elderName;
     window.num = user.number;
     window.guardName = user.guardName;
+    window.useremail = user.email;
 
     return (
       null
     );
   }
+
+
+
+  // fetch Form Data
+
+  function YogaForm() {
+    const [yoga, setYoga] = useState(null);
+    const [yloading, setYLoading] = useState(true);
+
+    useEffect(() => {
+      const fetchYForm = async () => {
+        try {
+          console.log(Edata);
+          const url = "http://localhost:8080/yform";
+          const { data: res } = await axios.post(url, Edata);
+          console.log(res[0]);
+          setYoga(res[0]);
+          setYLoading(false);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      fetchYForm();
+    }, [window.useruid]);
+
+    if (yloading) {
+      return <h1>loading</h1>;
+    }
+
+    if (!yoga) {
+      return <div>User not found</div>;
+    }
+
+    // Yoga data
+
+    window.yoganame = yoga.name;
+    window.yDuration = yoga.duration;
+    window.yTime = yoga.time;
+    window.yLink = yoga.link;
+
+    return (
+      null
+    );
+  }
+
+
+  function MedForm() {
+    const [med, setMed] = useState(null);
+    const [mloading, setMLoading] = useState(true);
+
+    useEffect(() => {
+      const fetchMForm = async () => {
+        try {
+          console.log(Edata);
+          const url = "http://localhost:8080/mform";
+          const { data: res } = await axios.post(url, Edata);
+          console.log(res[0]);
+          setMed(res[0]);
+          setMLoading(false);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      fetchMForm();
+    }, [window.useruid]);
+
+    if (mloading) {
+      return <h1>loading</h1>;
+    }
+
+    if (!med) {
+      return <div>User not found</div>;
+    }
+
+    // Medicine data
+
+    window.medname = med.name;
+    window.dose = med.dose;
+    window.mBreakfast = med.breakfast;
+    window.mLunch = med.lunch;
+    window.mHighTea = med.higtea;
+    window.mDinner = med.dinner;
+
+
+
+    return (
+      null
+    );
+  }
+
+
+  function FoodForm() {
+    const [food, setFood] = useState(null);
+    const [floading, setFLoading] = useState(true);
+
+    useEffect(() => {
+      const fetchFForm = async () => {
+        try {
+          console.log(Edata);
+          const url = "http://localhost:8080/fform";
+          const { data: res } = await axios.post(url, Edata);
+          console.log(res[0]);
+          setFood(res[0]);
+          setFLoading(false);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      fetchFForm();
+    }, [window.useruid]);
+
+    if (floading) {
+      return <h1>loading</h1>;
+    }
+
+    if (!food) {
+      return <div>User not found</div>;
+    }
+
+    // Food data
+
+    
+    window.fBreakfast = food.breakfast;
+    window.fLunch = food.lunch;
+    window.fHighTea = food.higtea;
+    window.fDinner = food.dinner;
+
+
+
+    return (
+      null
+    );
+  }
+
+
+  function CheckupForm() {
+    const [checkup, setCheckup] = useState(null);
+    const [cloading, setCLoading] = useState(true);
+
+    useEffect(() => {
+      const fetchCForm = async () => {
+        try {
+          console.log(Edata);
+          const url = "http://localhost:8080/cform";
+          const { data: res } = await axios.post(url, Edata);
+          console.log(res[0]);
+          setCheckup(res[0]);
+          setCLoading(false);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      fetchCForm();
+    }, [window.useruid]);
+
+    if (cloading) {
+      return <h1>loading</h1>;
+    }
+
+    if (!checkup) {
+      return <div>User not found</div>;
+    }
+
+    // Checkup data
+
+
+    window.checkupname = checkup.name;
+    window.cplace = checkup.place;
+    window.cdesc = checkup.descprition;
+    
+
+
+
+    return (
+      null
+    );
+  }
+
+
+  function NumForm() {
+    const [num, setNum] = useState(null);
+    const [nloading, setNLoading] = useState(true);
+
+    useEffect(() => {
+      const fetchNForm = async () => {
+        try {
+          console.log(Edata);
+          const url = "http://localhost:8080/nform";
+          const { data: res } = await axios.post(url, Edata);
+          console.log(res[0]);
+          setNum(res[0]);
+          setNLoading(false);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      fetchNForm();
+    }, [window.useruid]);
+
+    if (nloading) {
+      return <h1>loading</h1>;
+    }
+
+    if (!num) {
+      return <div>User not found</div>;
+    }
+
+    // Number data
+
+
+    window.numname = num.name;
+    window.formnum = num.number;
+
+
+
+
+    return (
+      null
+    );
+  }
+
+
+  //function calls
+
+  YogaForm();
+  MedForm();
+  FoodForm();
+  CheckupForm();
+  NumForm();
+
+  
 
 
 
@@ -204,6 +437,8 @@ const HomePage = () => {
                 <div className="modal-container">
                   this is the medicine logger.
                 </div>
+                <h3>{window.medname}</h3>
+                <h3>{ window.dose}</h3>
               </ModalBody>
               <button
                 type="button"
@@ -239,6 +474,7 @@ const HomePage = () => {
               </ModalHeader>
               <ModalBody>
                 <div className="modal-container">this is the Food logger.</div>
+                <h3>{ window.fBreakfast}</h3>
               </ModalBody>
               <button
                 type="button"
@@ -273,6 +509,9 @@ const HomePage = () => {
               </ModalHeader>
               <ModalBody>
                 <div className="modal-container">this is the Checkup logger.</div>
+                <h3>{window.checkupname}</h3>
+                <h3>{window.checkupname}</h3>
+                <h3>{window.cdesc}</h3>
               </ModalBody>
               <button
                 type="button"
@@ -305,6 +544,8 @@ const HomePage = () => {
               </ModalHeader>
               <ModalBody>
                 <div className="modal-container">this is the Family Contact Numbers.</div>
+                <h3>{window.numname}</h3>
+                <h3>{window.formnum}</h3>
               </ModalBody>
               <button
                 type="button"
@@ -338,6 +579,8 @@ const HomePage = () => {
               </ModalHeader>
               <ModalBody>
                 <div className="modal-container">this is the yoga logger.</div>
+                <h3>{window.yoganame}</h3>
+                <h3>{window.yDuration}</h3>
               </ModalBody>
               <button
                 type="button"

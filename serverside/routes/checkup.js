@@ -1,10 +1,10 @@
-const { Yoga } = require("../models/yoga");
+const { Checkup } = require("../models/checkup");
 
 const router = require("express").Router();
 
-router.post("/yoga", async (req, res) => {
+router.post("/checkup", async (req, res) => {
     try {
-        await new Yoga({ ...req.body }).save();
+        await new Checkup({ ...req.body }).save();
         res.status(201).send({ message: "Success" });
 
     } catch (error) {
