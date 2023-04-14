@@ -3,11 +3,13 @@ import Container from "react-bootstrap/Container";
 import { Modal, ModalBody, ModalHeader } from "reactstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-// import Select from 'react-select';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./HomePage.css";
+
+import { Popover, Whisper, Button } from 'rsuite';
+import { Dropdown } from 'rsuite';
 
 const HomeGuardian = () => {
 
@@ -72,15 +74,34 @@ const HomeGuardian = () => {
   };
 
 
+
+
   return (
     <>
       <Navbar />
+
+      <br></br>
+      <div className="profile">
+        <div className="profile-button">
+          <img src="profile.png" alt="Profile Image"></img>
+          <span>Guardian</span>
+        </div>
+        <div className="dropdown-content">
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+
       <Container fluid>
         <Row className="main-row-home-1 ">
           {/* //EMERGENCY contact number */}
-          <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
-            {/* //this is the popup */}
 
+
+
+
+
+          <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
             <Modal
               size="lg"
               isOpen={Sosmodal}
@@ -126,14 +147,14 @@ const HomeGuardian = () => {
                   </table>
                   <br></br>
                 </div>
-              <button
-                type="button"
-                className="close-button"
-                onClick={() => setSosmodal(!Sosmodal)}
-              >
-                Close
-              </button>
-              <br></br>
+                <button
+                  type="button"
+                  className="close-button"
+                  onClick={() => setSosmodal(!Sosmodal)}
+                >
+                  Close
+                </button>
+                <br></br>
               </ModalBody>
 
             </Modal>
@@ -151,7 +172,7 @@ const HomeGuardian = () => {
           {/* this is the medicine logger */}
           <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
             {/* this is the popup for the medicine logger */}
-            {/* <Modal
+            <Modal
               size="lg"
               isOpen={Medmodal}
               toggle={() => setMedmodal(!Medmodal)}
@@ -229,7 +250,7 @@ const HomeGuardian = () => {
                   </button>
                 </form>
               </ModalBody>
-            </Modal> */}
+            </Modal>
 
             <center>
               <img

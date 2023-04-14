@@ -10,7 +10,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 import "./toast.css";
-import { Modal, ModalBody, ModalHeader } from "reactstrap";
+import { Modal, ModalBody, ModalFooter, ModalHeader } from "reactstrap";
 
 
 const HomePage = () => {
@@ -21,8 +21,38 @@ const HomePage = () => {
   const [Checkupmodal, setCheckupmodal] = useState(false);
   const [Familymodal, setFamilymodal] = useState(false);
   const [Yogamodal, setYogamodal] = useState(false);
-
   const [showModal, setShowModal] = useState(false);
+
+
+
+  const [count, setCount] = useState(0);
+
+  function handleButtonClick() {
+    setCount(count + 10);
+    setSosmodal(!Sosmodal);
+  }
+  function handlemedButtonClick() {
+    setCount(count + 10);
+    setMedmodal(!Medmodal);
+  }
+  function handlefoodButtonClick() {
+    setCount(count + 10);
+    setFoodmodal(!Foodmodal);
+  }
+  function handlecheckButtonClick() {
+    setCount(count + 10);
+    setCheckupmodal(!Checkupmodal);
+  }
+  function handlefamilyButtonClick() {
+    setCount(count + 10);
+    setFamilymodal(!Familymodal);
+  }
+  function handleyogaButtonClick() {
+    setCount(count + 10);
+    setYogamodal(!Yogamodal);
+  }
+
+
 
   useEffect(() => {
     toast.success('Login Success !', {
@@ -105,8 +135,6 @@ const HomePage = () => {
   window.signout = true;
 
 
-
-
   return (
     <>
       <UserDetails />
@@ -119,19 +147,31 @@ const HomePage = () => {
       <Container fluid>
         <Row className="main-row-home-1 ">
           {/* //EMERGENCY contact number */}
+
+          <div className="main-points">
+            <img src="coin.jpg" className="points-vector"></img>
+            <div> = {count}</div>
+          </div>
+          <br></br>
+
           <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
             {/* //this is the popup */}
 
-            {/* <Modal
+            <Modal
               size="lg"
               isOpen={Sosmodal}
               toggle={() => setSosmodal(!Sosmodal)}
             >
               <ModalHeader toggle={() => setSosmodal(!Sosmodal)}>
+
                 <h3 id="sostext">Emergency Contact Numbers</h3>
               </ModalHeader>
               <ModalBody>
-              <div className="modal-wrapper"></div>
+
+                <br></br>
+
+                
+                <div className="modal-wrapper"></div>
                 <div className="modal-container">
                   <br></br>
                   <table id="customers">
@@ -169,15 +209,23 @@ const HomePage = () => {
                   <br></br>
                 </div>
               </ModalBody>
+
+
+
+
               <button
                 type="button"
-                className="close-button"
-                onClick={() => setSosmodal(!Sosmodal)}
+                className="tick-button"
+                onClick={handleButtonClick}
               >
-                Close
+                <img src="tick.png" id="tick"></img>
               </button>
               <br></br>
-            </Modal> */}
+
+
+
+
+            </Modal>
 
             <center>
               <img
@@ -205,12 +253,14 @@ const HomePage = () => {
                   this is the medicine logger.
                 </div>
               </ModalBody>
+
+
               <button
                 type="button"
-                className="close-button"
-                onClick={() => setMedmodal(!Medmodal)}
+                className="tick-button"
+                onClick={handlemedButtonClick}
               >
-                Close
+                <img src="tick.png" id="tick"></img>
               </button>
               <br></br>
             </Modal>
@@ -238,14 +288,15 @@ const HomePage = () => {
                 <h3 id="sostext">Food logger</h3>
               </ModalHeader>
               <ModalBody>
+                <br></br>
                 <div className="modal-container">this is the Food logger.</div>
               </ModalBody>
               <button
                 type="button"
-                className="close-button"
-                onClick={() => setFoodmodal(!Foodmodal)}
+                className="tick-button"
+                onClick={handlefoodButtonClick}
               >
-                Close
+                <img src="tick.png" id="tick"></img>
               </button>
               <br></br>
             </Modal>
@@ -272,14 +323,16 @@ const HomePage = () => {
                 <h3 id="sostext">Checkup logger</h3>
               </ModalHeader>
               <ModalBody>
+
+                <br></br>
                 <div className="modal-container">this is the Checkup logger.</div>
               </ModalBody>
               <button
                 type="button"
-                className="close-button"
-                onClick={() => setCheckupmodal(!Checkupmodal)}
+                className="tick-button"
+                onClick={handlecheckButtonClick}
               >
-                Close
+                <img src="tick.png" id="tick"></img>
               </button>
               <br></br>
             </Modal>
@@ -304,14 +357,16 @@ const HomePage = () => {
                 <h3 id="sostext">Family logger</h3>
               </ModalHeader>
               <ModalBody>
+
+                <br></br>
                 <div className="modal-container">this is the Family Contact Numbers.</div>
               </ModalBody>
               <button
                 type="button"
-                className="close-button"
-                onClick={() => setFamilymodal(!Familymodal)}
+                className="tick-button"
+                onClick={handlefamilyButtonClick}
               >
-                Close
+                <img src="tick.png" id="tick"></img>
               </button>
               <br></br>
             </Modal>
@@ -337,14 +392,16 @@ const HomePage = () => {
                 <h3 id="sostext">Yoga logger</h3>
               </ModalHeader>
               <ModalBody>
+
+                <br></br>
                 <div className="modal-container">this is the yoga logger.</div>
               </ModalBody>
               <button
                 type="button"
-                className="close-button"
-                onClick={() => setYogamodal(!Yogamodal)}
+                className="tick-button"
+                onClick={handleyogaButtonClick}
               >
-                Close
+                <img src="tick.png" id="tick"></img>
               </button>
               <br></br>
             </Modal>
