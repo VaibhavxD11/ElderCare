@@ -12,8 +12,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import "./toast.css";
 import "./HomePage.css";
 
-import { Popover, Whisper, Button } from 'rsuite';
-import { Dropdown } from 'rsuite';
 
 const HomeGuardian = () => {
 
@@ -136,14 +134,278 @@ const HomeGuardian = () => {
   };
 
 
+
+  // API Endpoint connection for Form Data
+
+
+  // start
+
+  // 1) Yoga
+  const [ydata, setYData] = useState({
+    name: "",
+    duration: "",
+    time: "",
+    link: "",
+    email: window.useremail,
+    uid: window.useruid,
+  });
+
+  const [yerror, setYError] = useState("")
+
+  const handleYChange = ({ currentTarget: input }) => {
+    setYData({ ...ydata, [input.name]: input.value });
+  };
+
+  const handleYSubmit = async (e) => {
+    setYogamodal(false);
+    e.preventDefault();
+    console.log(ydata);
+
+    try {
+      const url = "http://localhost:8080/yoga";
+      const { data: res } = await axios.post(url, ydata);
+      console.log(res.message);
+
+    } catch (error) {
+      if (error.response &&
+        error.response.status >= 400 &&
+        error.response.status <= 500
+      ) {
+        // errText = (error.response.data.message)
+        setYError(error.response.data.message)
+        // console.log(errText);
+      }
+    }
+
+    setYData("");
+
+  }
+
+  // 2) Food
+
+  const [fdata, setFData] = useState({
+    breakfast: "",
+    lunch: "",
+    hightea: "",
+    dinner: "",
+    email: window.useremail,
+    uid: window.useruid
+  });
+
+  const [ferror, setFError] = useState("")
+
+  const handleFChange = ({ currentTarget: input }) => {
+    setFData({ ...fdata, [input.name]: input.value });
+  };
+
+  const handleFSubmit = async (e) => {
+    setFoodmodal(false);
+    console.log(1);
+    e.preventDefault();
+    console.log(fdata);
+
+    try {
+      const url = "http://localhost:8080/food";
+      const { data: res } = await axios.post(url, fdata);
+      console.log(res.message);
+
+    } catch (error) {
+      if (error.response &&
+        error.response.status >= 400 &&
+        error.response.status <= 500
+      ) {
+        // errText = (error.response.data.message)
+        setFError(error.response.data.message)
+        // console.log(errText);
+      }
+    }
+    setFData("");
+
+  }
+
+
+  // 3) Meds
+
+
+  const [mdata, setMData] = useState({
+    name: "",
+    dose: "",
+    breakfast: "",
+    lunch: "",
+    hightea: "",
+    dinner: "",
+    email: window.useremail,
+    uid: window.useruid,
+  });
+
+  const [merror, setMError] = useState("")
+
+  const handleMChange = ({ currentTarget: input }) => {
+    setMData({ ...mdata, [input.name]: input.value });
+  };
+
+
+  const handleMSubmit = async (e) => {
+    setMedmodal(false);
+    console.log(1);
+    e.preventDefault();
+    console.log(mdata);
+
+
+
+    try {
+      console.log(window.useruid);
+      const url = "http://localhost:8080/med";
+      const { data: res } = await axios.post(url, mdata);
+      console.log(res.message);
+
+
+    } catch (error) {
+      if (error.response &&
+        error.response.status >= 400 &&
+        error.response.status <= 500
+      ) {
+        // errText = (error.response.data.message)
+        setMError(error.response.data.message)
+        // console.log(errText);
+      }
+    }
+    setMData("");
+
+  }
+
+
+
+
+  // 4) Checkups
+
+
+  const [cdata, setCData] = useState({
+    name: "",
+    place: "",
+    description: "",
+    email: window.useremail,
+    uid: window.useruid
+  });
+
+  const [cerror, setCError] = useState("")
+
+  const handleCChange = ({ currentTarget: input }) => {
+    setCData({ ...cdata, [input.name]: input.value });
+  };
+
+
+  const handleCSubmit = async (e) => {
+    setCheckupmodal(false);
+    console.log(1);
+    e.preventDefault();
+    console.log(cdata);
+
+    try {
+      const url = "http://localhost:8080/checkup";
+      const { data: res } = await axios.post(url, cdata);
+      console.log(res.message);
+
+    } catch (error) {
+      if (error.response &&
+        error.response.status >= 400 &&
+        error.response.status <= 500
+      ) {
+        // errText = (error.response.data.message)
+        setCError(error.response.data.message);
+        // console.log(errText);
+      }
+    }
+    setCData("");
+
+  }
+
+
+  // 5) Phone Numbers
+
+
+  const [pdata, setPData] = useState({
+    name: "",
+    number: "",
+    email: window.useremail,
+    uid: window.useruid
+  });
+
+  const [perror, setPError] = useState("")
+
+  const handlePChange = ({ currentTarget: input }) => {
+    setPData({ ...pdata, [input.name]: input.value });
+  };
+
+
+  const handlePSubmit = async (e) => {
+    setFamilymodal(false);
+    console.log(1);
+    e.preventDefault();
+    console.log(pdata);
+
+    try {
+      const url = "http://localhost:8080/number";
+      const { data: res } = await axios.post(url, pdata);
+      console.log(res.message);
+
+    } catch (error) {
+      if (error.response &&
+        error.response.status >= 400 &&
+        error.response.status <= 500
+      ) {
+        // errText = (error.response.data.message)
+        setCError(error.response.data.message);
+        // console.log(errText);
+      }
+    }
+
+    setPData("");
+
+  }
+
+
+
+  // end
+
+
+
+
+  const closeModal = () => {
+    setSosmodal(false);
+    setMedmodal(false);
+    setMData("");
+    setFoodmodal(false);
+    setFData("");
+    setCheckupmodal(false);
+    setCData("");
+    setFamilymodal(false);
+    setPData("");
+    setYogamodal(false);
+    setYData("");
+
+  }
+
+  const [count, setCount] = useState(0);
+
+
   return (
     <>
       <Navbar />
+      <div>
+        <ToastContainer />
+      </div>
+      <UserDetails />
       <Container fluid>
         <Row className="main-row-home-1 ">
           {/* //EMERGENCY contact number */}
 
-
+          <div id = "points-text">Your elder has earned some points</div>
+          <div className="main-points">
+            <img src="coin.jpg" className="points-vector"></img>
+            <div> = {count}</div>
+          </div>
+          <br></br>
 
 
 
@@ -227,124 +489,52 @@ const HomeGuardian = () => {
                 <h3 id="sostext">Medicine logger</h3>
               </ModalHeader>
               <ModalBody>
+
+
                 <form onSubmit={handleMSubmit}>
+
+
                   <div className="med-name-class">
                     <label id="med-label">Medicine Name</label>
                     <input type="text" id="med-input"
                       name="name"
                       value={mdata.name}
                       onChange={handleMChange}
+                      placeholder="Medicine Name"
                     ></input>
                     <br></br>
                   </div>
 
-                  <div className="dose-radio-button-class">
+                  <div className="med-name-class">
                     <label>Dose of the medicine</label>
-                    <label>
                       <input type="text" id="med-input"
                         name="dose"
                         value={mdata.dose}
                         onChange={handleMChange}
+                        placeholder="eg. full or half tablet"
                       ></input>
-                      {/* Full tablet */}
-                    </label>
                   </div>
 
                   <div className="time-checkbox-button-class">
                     <label>Time of the medicine</label>
                     <label>
-                      <input
-                        type="checkbox"
-                        name="breakfast"
-                        checked={isChecked}
-                        onChange={handleCheckboxChange}
-                      ></input>
+                      <input type="checkbox" name="radio"></input>
                       Breakfast
                     </label>
                     <label>
-                      <input
-                        type="checkbox"
-                        name="checkbox"
-                        checked={isLunchChecked}
-                        onChange={handleLunchCheckboxChange}
-                      ></input>
+                      <input type="checkbox" name="radio"></input>
                       Lunch
                     </label>
-
                     <label>
-                      <input
-                        type="checkbox"
-                        name="checkbox"
-                        checked={isHighChecked}
-                        onChange={handleHighCheckboxChange}
-                      ></input>
+                      <input type="checkbox" name="radio"></input>
                       High tea
                     </label>
-
                     <label>
-                      <input
-                        type="checkbox"
-                        name="dinner"
-                        checked={isDinnerChecked}
-                        onChange={handleDinnerCheckboxChange}
-                      ></input>
+                      <input type="checkbox" name="radio"></input>
                       Dinner
                     </label>
                   </div>
 
-                  {isChecked && (
-                    <div className="med-name-class">
-                      <br></br>
-                      <label id="med-label">Breakfast</label>
-                      <input type="text" id="med-input"
-                        name="breakfast"
-                        value={mdata.breakfast}
-                        onChange={handleMChange}
-                      ></input>
-                      <br></br>
-                    </div>
-                  )}
-
-                  {isLunchChecked && (
-                    <div className="med-name-class">
-                      <br></br>
-                      <label id="med-label">Lunch</label>
-                      <input type="text" id="med-input"
-                        name="lunch"
-                        value={mdata.lunch}
-                        onChange={handleMChange}
-                      >
-
-                      </input>
-                      <br></br>
-                    </div>
-                  )}
-
-                  {isHighChecked && (
-                    <div className="med-name-class">
-                      <br></br>
-                      <label id="med-label">High Tea</label>
-                      <input type="text" id="med-input"
-                        name="hightea"
-                        value={mdata.hightea}
-                        onChange={handleMChange}
-                      ></input>
-                      <br></br>
-                    </div>
-                  )}
-
-                  {isDinnerChecked && (
-                    <div className="med-name-class">
-                      <br></br>
-                      <label id="med-label">Dinner</label>
-                      <input type="text" id="med-input"
-                        name="dinner"
-                        value={mdata.dinner}
-                        onChange={handleMChange}
-                      ></input>
-                      <br></br>
-                    </div>
-                  )}
                   <br></br>
 
                   <div className="image-upload">
@@ -365,7 +555,7 @@ const HomeGuardian = () => {
                   <button
                     type="button"
                     className="close-button"
-                    onClick={handleMSubmit}
+                    onClick={() => setMedmodal(!Medmodal)}
                   >
                     Publish
                   </button>
@@ -382,6 +572,7 @@ const HomeGuardian = () => {
               ></img>
             </center>
           </Col>
+
 
           {/* this is the food logger */}
 
@@ -405,6 +596,7 @@ const HomeGuardian = () => {
                         name="breakfast"
                         checked={isChecked}
                         onChange={handleCheckboxChange}
+                        placeholder="breakfast"
                       ></input>
                       Breakfast
                     </label>
@@ -631,7 +823,7 @@ const HomeGuardian = () => {
                   <button
                     type="button"
                     className="close-button"
-                    onClick={ handlePSubmit }
+                    onClick={handlePSubmit}
                   >
                     Publish
                   </button>
@@ -664,8 +856,9 @@ const HomeGuardian = () => {
                     <label id="med-label">Name</label>
                     <input type="text" id="med-input"
                       name="name"
-                    onChange={handleYChange}
-                    value={ydata.name}
+                      onChange={handleYChange}
+                      value={ydata.name}
+                      placeholder="e.g. pranayam"
                     >
 
                     </input>
@@ -678,6 +871,7 @@ const HomeGuardian = () => {
                       name="duration"
                       onChange={handleYChange}
                       value={ydata.duration}
+                      placeholder="e.g. 15mins"
                     >
 
                     </input>
@@ -690,6 +884,7 @@ const HomeGuardian = () => {
                       name="time"
                       onChange={handleYChange}
                       value={ydata.time}
+                      placeholder="e.g. mornig 6 am"
                     >
 
                     </input>
@@ -702,9 +897,10 @@ const HomeGuardian = () => {
                       name="link"
                       onChange={handleYChange}
                       value={ydata.link}
+                      placeholder=" e.g. https://www.youtube.com/"
                       required>
-                      
-                      </input>
+
+                    </input>
                     <br></br>
                   </div>
                   <br></br>
