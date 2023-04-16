@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const pointSchema = new mongoose.Schema({
     point: { type: Number, required: true },
+    name: {type: String, reqired: true},
     uid: { type: Number, required: true }
 });
 
