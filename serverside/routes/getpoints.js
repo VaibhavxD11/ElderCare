@@ -4,7 +4,7 @@ const router = require("express").Router();
 
 router.get("/getpoints", async (req, res) => {
     try {
-        const points = await point.find({});
+        const points = await point.find({}).sort({point: -1});
         console.log(points);
         // if (!points) {
         //     res.status(401).send({ message: "No Points" });

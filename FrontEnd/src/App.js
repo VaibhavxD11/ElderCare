@@ -7,11 +7,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import HomePage from "./components/HomePage";
 import About from "./components/About";
-import News from "./components/News";
 import ContactForm from "./components/ContactForm";
 import Signup from "./components/Signup";
 import HomeGuardian from "./components/HomeGuardian";
 import "bootstrap/dist/css/bootstrap.min.css";
+import LeaderBoard from "./components/LeaderBoard";
 
 const Home = () => {
   return (
@@ -71,7 +71,7 @@ const App = () => {
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<ContactForm />}></Route>
-        <Route path="/news" element={<News />}></Route>
+        <Route path="/leaderboard" element={<LeaderBoard />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/homepage" element={<HomePage />}></Route>

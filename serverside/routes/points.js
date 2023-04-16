@@ -1,12 +1,15 @@
 const { point } = require("../models/point");
+const { User} = require("../models/user");
 
 const router = require("express").Router();
 
 router.post("/points", async (req, res) => {
     try {
         var points = await point.findOne({ uid: req.body.uid }); 
+        const user = await User.findOne({ uid: req.body.uid });
+        console.log(user.elderName);
         if (!points) {
-            await new point({ ...req.body }).save();
+            await new point({ ...req.body, name: user.elderName }).save();
         }
         else {
             // await point.findByIdAndUpdate(points._id,{ point: req.body.point })

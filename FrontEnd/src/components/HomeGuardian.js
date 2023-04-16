@@ -15,7 +15,7 @@ import "./HomePage.css";
 
 const HomeGuardian = () => {
 
-  var uid;
+  var uid; UserDetails();
 
 
   useEffect(() => {
@@ -51,7 +51,7 @@ const HomeGuardian = () => {
         }
       };
       fetchGUser();
-    }, [window.useremail]);
+    }, []);
 
     if (gloading) {
       return null;
@@ -67,6 +67,8 @@ const HomeGuardian = () => {
     window.num = guser.number;
     window.guardName = guser.guardName;
     window.userid = guser.uid;
+    uid = guser.uid;
+    
 
 
     return (
@@ -74,7 +76,14 @@ const HomeGuardian = () => {
     );
   }
 
-  UserDetails();
+  useEffect(() => {
+    setYData({ ...ydata, uid: window.userid });
+    setFData({ ...fdata, uid: window.userid });
+    setCData({ ...cdata, uid: window.userid });
+    setPData({ ...pdata, uid: window.userid });
+    setMData({ ...mdata, uid: window.userid });
+
+  }, [window.userid]);
 
 
 
@@ -155,14 +164,16 @@ const HomeGuardian = () => {
     time: "",
     link: "",
     email: window.useremail,
-    uid: window.userid,
+    uid: uid,
   });
+
 
   const [yerror, setYError] = useState("")
 
   const handleYChange = ({ currentTarget: input }) => {
     setYData({ ...ydata, [input.name]: input.value });
   };
+
 
   const handleYSubmit = async (e) => {
     setYogamodal(false);
@@ -199,7 +210,7 @@ const HomeGuardian = () => {
     hightea: "",
     dinner: "",
     email: window.useremail,
-    uid: window.userid,
+    uid: uid,
   });
 
   const [ferror, setFError] = useState("")
@@ -246,7 +257,7 @@ const HomeGuardian = () => {
     hightea: "",
     dinner: "",
     email: window.useremail,
-    uid: window.userid,
+    uid: uid,
   });
 
   const [merror, setMError] = useState("")
@@ -297,7 +308,7 @@ const HomeGuardian = () => {
     place: "",
     description: "",
     email: window.useremail,
-    uid: window.userid,
+    uid: uid,
   });
 
   const [cerror, setCError] = useState("")
@@ -341,7 +352,7 @@ const HomeGuardian = () => {
     name: "",
     number: "",
     email: window.useremail,
-    uid: window.userid,
+    uid: uid,
   });
 
   const [perror, setPError] = useState("")
@@ -533,22 +544,100 @@ const HomeGuardian = () => {
                   <div className="time-checkbox-button-class">
                     <label>Time of the medicine</label>
                     <label>
-                      <input type="checkbox" name="radio"></input>
+                      <input
+                        type="checkbox"
+                        name="breakfast"
+                        checked={isChecked}
+                        onChange={handleCheckboxChange}
+                        placeholder="breakfast"
+                      ></input>
                       Breakfast
                     </label>
                     <label>
-                      <input type="checkbox" name="radio"></input>
+                      <input
+                        type="checkbox"
+                        name="checkbox"
+                        checked={isLunchChecked}
+                        onChange={handleLunchCheckboxChange}
+                      ></input>
                       Lunch
                     </label>
+
                     <label>
-                      <input type="checkbox" name="radio"></input>
+                      <input
+                        type="checkbox"
+                        name="checkbox"
+                        checked={isHighChecked}
+                        onChange={handleHighCheckboxChange}
+                      ></input>
                       High tea
                     </label>
+
                     <label>
-                      <input type="checkbox" name="radio"></input>
+                      <input
+                        type="checkbox"
+                        name="dinner"
+                        checked={isDinnerChecked}
+                        onChange={handleDinnerCheckboxChange}
+                      ></input>
                       Dinner
                     </label>
                   </div>
+
+                  {isChecked && (
+                    <div className="med-name-class">
+                      <br></br>
+                      <label id="med-label">Breakfast</label>
+                      <input type="text" id="med-input"
+                        name="breakfast"
+                        value={mdata.breakfast}
+                        onChange={handleMChange}
+                      ></input>
+                      <br></br>
+                    </div>
+                  )}
+
+                  {isLunchChecked && (
+                    <div className="med-name-class">
+                      <br></br>
+                      <label id="med-label">Lunch</label>
+                      <input type="text" id="med-input"
+                        name="lunch"
+                        value={mdata.lunch}
+                        onChange={handleMChange}
+                      >
+
+                      </input>
+                      <br></br>
+                    </div>
+                  )}
+
+                  {isHighChecked && (
+                    <div className="med-name-class">
+                      <br></br>
+                      <label id="med-label">High Tea</label>
+                      <input type="text" id="med-input"
+                        name="hightea"
+                        value={mdata.hightea}
+                        onChange={handleMChange}
+                      ></input>
+                      <br></br>
+                    </div>
+                  )}
+
+                  {isDinnerChecked && (
+                    <div className="med-name-class">
+                      <br></br>
+                      <label id="med-label">Dinner</label>
+                      <input type="text" id="med-input"
+                        name="dinner"
+                        value={mdata.dinner}
+                        onChange={handleMChange}
+                      ></input>
+                      <br></br>
+                    </div>
+                  )}
+                  
 
                   <br></br>
 
