@@ -25,7 +25,7 @@ const HomePage = () => {
   useEffect(() => {
     handlePSubmit();
   }, [])
-  
+
 
 
 
@@ -277,7 +277,7 @@ const HomePage = () => {
 
     // Food data
 
-    
+
     window.fBreakfast = food.breakfast;
     window.fLunch = food.lunch;
     window.fHighTea = food.higtea;
@@ -325,7 +325,7 @@ const HomePage = () => {
     window.checkupname = checkup.name;
     window.cplace = checkup.place;
     window.cdesc = checkup.descprition;
-    
+
 
 
 
@@ -393,7 +393,7 @@ const HomePage = () => {
 
 
 
-  
+
 
   // useEffect(() => {
   //   if (todayDate.getTime - oldtime) {
@@ -411,7 +411,7 @@ const HomePage = () => {
   CheckupForm();
   NumForm();
 
-  
+
 
 
 
@@ -441,7 +441,7 @@ const HomePage = () => {
 
   return (
     <>
-      
+
       <div>
         <ToastContainer />
       </div>
@@ -474,7 +474,7 @@ const HomePage = () => {
 
                 <br></br>
 
-                
+
                 <div className="modal-wrapper"></div>
                 <div className="modal-container">
                   <br></br>
@@ -553,12 +553,28 @@ const HomePage = () => {
                 <h3 id="sostext">Medicine logger</h3>
               </ModalHeader>
               <ModalBody>
+
+                <div className="modal-wrapper"></div>
                 <div className="modal-container">
-                  this is the medicine logger.
+                <br></br>
+                  <table id="customers">
+                    <tr>
+                      <th>Medicine Name</th>
+                      <th>Image</th>
+                      <th>Time</th>
+                      <th>Dose</th>
+                    </tr>
+                    <tr>
+                      <td>{window.medname}</td>
+                      <td>powekp</td>
+                      <td>Jawpmfepipur</td>
+                      <td>{window.dose}</td>
+                    </tr>
+                    
+                  </table>
+                  <br></br>
                 </div>
-                <h3>{window.medname}</h3>
-                <h3>{window.dose}</h3>
-                
+
               </ModalBody>
 
 
@@ -595,9 +611,25 @@ const HomePage = () => {
                 <h3 id="sostext">Food logger</h3>
               </ModalHeader>
               <ModalBody>
+              <div className="modal-wrapper"></div>
+                <div className="modal-container">
                 <br></br>
-                <div className="modal-container">this is the Food logger.</div>
-                <h3>{ window.fBreakfast}</h3>
+                  <table id="customers">
+                    <tr>
+                      <th>Breakfast</th>
+                      <th>Lunch</th>
+                      <th>High Tea</th>
+                      <th>Dose</th>
+                    </tr>
+                    <tr>
+                      <td>{window.fBreakfast}</td>
+                      <td>powekp</td>
+                      <td>Jawpmfepipur</td>
+                      <td>bkhb ku k</td>
+                    </tr>
+                  </table>
+                  <br></br>
+                </div>
               </ModalBody>
               <button
                 type="button"
@@ -632,11 +664,29 @@ const HomePage = () => {
               </ModalHeader>
               <ModalBody>
 
+
+              <div className="modal-wrapper"></div>
+                <div className="modal-container">
                 <br></br>
-                <div className="modal-container">this is the Checkup logger.</div>
-                <h3>{window.checkupname}</h3>
-                <h3>{window.checkupname}</h3>
-                <h3>{window.cdesc}</h3>
+                  <table id="customers">
+                    <tr>
+                      <th>Name</th>
+                      <th>Place</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>{window.checkupname}</td>
+                      <td>{window.checkupname}</td>
+                      <td>{window.cdesc}</td>
+                    </tr>
+                    <tr>
+                      <td>Heart checkup</td>
+                      <td>Fortis</td>
+                      <td>arteries check</td>
+                    </tr>
+                  </table>
+                  <br></br>
+                </div>
               </ModalBody>
               <button
                 type="button"
@@ -669,10 +719,29 @@ const HomePage = () => {
               </ModalHeader>
               <ModalBody>
 
+
+              <div className="modal-wrapper"></div>
+                <div className="modal-container">
                 <br></br>
-                <div className="modal-container">this is the Family Contact Numbers.</div>
-                <h3>{window.numname}</h3>
-                <h3>{window.formnum}</h3>
+                  <table id="customers">
+                    <tr>
+                      <th>Name</th>
+                      <th>Mobile No.</th>
+                      <th>Image</th>
+                    </tr>
+                    <tr>
+                      <td>{window.numname}</td>
+                      <td>{window.formnum}</td>
+                      <td>image</td>
+                    </tr>
+                    <tr>
+                      <td>Piyush</td>
+                      <td>9460868085</td>
+                      <td>Image</td>
+                    </tr>
+                  </table>
+                  <br></br>
+                </div>
                 {/* <h3>{data[currentIndex].name}</h3>
                 <h3>{data[currentIndex].number}</h3> */}
               </ModalBody>
@@ -708,10 +777,27 @@ const HomePage = () => {
               </ModalHeader>
               <ModalBody>
 
+
+              <div className="modal-wrapper"></div>
+                <div className="modal-container">
                 <br></br>
-                <div className="modal-container">this is the yoga logger.</div>
-                <h3>{window.yoganame}</h3>
-                <h3>{window.yDuration}</h3>
+                  <table id="customers">
+                    <tr>
+                      <th>Exercise Name</th>
+                      <th>Duration</th>
+                      <th>Time</th>
+                      <th>Reference Link</th>
+                    </tr>
+                    <tr>
+                      <td>{window.yoganame}</td>
+                      <td>{window.yDuration}</td>
+                      <td>Jawpmfepipur</td>
+                      <td>youtube</td>
+                    </tr>
+                    
+                  </table>
+                  <br></br>
+                </div>
               </ModalBody>
               <button
                 type="button"
