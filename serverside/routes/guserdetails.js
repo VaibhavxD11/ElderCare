@@ -3,7 +3,13 @@ const router = require("express").Router();
 
 router.post("/gUserDetails", async (req, res) => {
     try {
-        const user = await User.findOne({ email: req.body.email });
+        var user;
+        if (req.body.email) {
+            user = await User.findOne({ email: req.body.email });
+        }
+        else {
+            user = await User.findOne({ uid: req.body.id });
+        }
         if (!user) {
             return res.status(404).send({ message: "User not found" });
         }
