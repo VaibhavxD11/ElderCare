@@ -16,6 +16,21 @@ import { Modal, ModalBody, ModalFooter, ModalHeader } from "reactstrap";
 
 const HomePage = () => {
 
+
+
+  const [Edata, setEData] = useState({
+    id: window.useruid
+  });
+
+  useEffect(() => {
+    handlePSubmit();
+  }, [])
+  
+
+
+
+
+
   const [Sosmodal, setSosmodal] = useState(false);
   const [Medmodal, setMedmodal] = useState(false);
   const [Foodmodal, setFoodmodal] = useState(false);
@@ -25,33 +40,109 @@ const HomePage = () => {
   const [showModal, setShowModal] = useState(false);
 
 
-
   const [count, setCount] = useState(0);
 
+
+  const [pdata, setPData] = useState({
+    point: 0,
+    uid: window.useruid,
+  });
+
+  function handlePChange() {
+    setPData({ ...pdata, point: count + 20 });
+  }
+
+
+  //Points API call
+
+
+
+  const [perror, setPError] = useState("");
+  const [result, setResult] = useState(0);
+
+  const handlePSubmit = async (e) => {
+
+    console.log(pdata);
+
+    try {
+      const url = "http://localhost:8080/points";
+      const { data: res } = await axios.post(url, pdata);
+      console.log(res.data.point);
+      setCount(res.data.point);
+
+    } catch (error) {
+      if (error.response &&
+        error.response.status >= 400 &&
+        error.response.status <= 500
+      ) {
+        // errText = (error.response.data.message)
+        setPError(error.response.data.message);
+        // console.log(errText);
+      }
+    }
+
+  }
+
+
+
+  const [m, setM] = useState(0);
+  const [f, setF] = useState(0);
+  const [c, setC] = useState(0);
+  const [y, setY] = useState(0);
+  const [n, setN] = useState(0);
+
   function handleButtonClick() {
-    setCount(count + 10);
     setSosmodal(!Sosmodal);
   }
   function handlemedButtonClick() {
-    setCount(count + 10);
+    if (m == 0) {
+      setCount(count + 10);
+      handlePChange();
+      setM(m + 1);
+    }
     setMedmodal(!Medmodal);
   }
   function handlefoodButtonClick() {
-    setCount(count + 10);
+    if (f == 0) {
+      setCount(count + 10);
+      handlePChange();
+      setF(f + 1);
+    }
     setFoodmodal(!Foodmodal);
   }
   function handlecheckButtonClick() {
-    setCount(count + 10);
+    if (c == 0) {
+      setCount(count + 10);
+      handlePChange();
+      setC(c + 1);
+    }
     setCheckupmodal(!Checkupmodal);
   }
   function handlefamilyButtonClick() {
-    setCount(count + 10);
+    if (n == 0) {
+      setCount(count + 10);
+      handlePChange();
+      setN(n + 1);
+    }
     setFamilymodal(!Familymodal);
   }
   function handleyogaButtonClick() {
-    setCount(count + 10);
+    if (y == 0) {
+      setCount(count + 10);
+      setY(y + 1);
+    }
+    handlePChange();
+    handlePSubmit();
     setYogamodal(!Yogamodal);
   }
+
+  // useEffect(() => {
+  //   setPData({ ...pdata, point: count + 10 });
+  //   if (count == 50) {
+  //     handlePSubmit();
+  //   }
+  // }, [count]);
+
 
 
 
@@ -65,51 +156,6 @@ const HomePage = () => {
     });
   }, []);
 
-
-
-
-  const [Edata, setEData] = useState({
-    id: window.useruid
-  });
-
-
-  function UserDetails() {
-    const [user, setUser] = useState(null);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-      const fetchUser = async () => {
-        try {
-          const url = "http://localhost:8080/userdetails";
-          const { data: res } = await axios.post(url, Edata);
-          setUser(res);
-          setLoading(false);
-        } catch (error) {
-          console.error(error);
-        }
-      };
-      fetchUser();
-    }, [window.useruid]);
-
-    if (loading) {
-      return null;
-    }
-
-    if (!user) {
-      return <div>User not found</div>;
-    }
-
-    // profile data
-
-    window.elderName = user.elderName;
-    window.num = user.number;
-    window.guardName = user.guardName;
-    window.useremail = user.email;
-
-    return (
-      null
-    );
-  }
 
 
 
@@ -289,6 +335,10 @@ const HomePage = () => {
   }
 
 
+  const [data, setData] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+
   function NumForm() {
     const [num, setNum] = useState(null);
     const [nloading, setNLoading] = useState(true);
@@ -301,6 +351,7 @@ const HomePage = () => {
           const { data: res } = await axios.post(url, Edata);
           console.log(res[0]);
           setNum(res[0]);
+          setData(res);
           setNLoading(false);
         } catch (error) {
           console.error(error);
@@ -330,6 +381,26 @@ const HomePage = () => {
       null
     );
   }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex(prevIndex =>
+        prevIndex === data.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000); // Set the interval duration to 30 seconds (30000 milliseconds)
+    return () => clearInterval(interval);
+  }, [data]);
+
+
+
+  
+
+  // useEffect(() => {
+  //   if (todayDate.getTime - oldtime) {
+  //     handlePSubmit();
+  //   }
+  // })
+
 
 
   //function calls
@@ -370,7 +441,7 @@ const HomePage = () => {
 
   return (
     <>
-      <UserDetails />
+      
       <div>
         <ToastContainer />
       </div>
@@ -486,7 +557,8 @@ const HomePage = () => {
                   this is the medicine logger.
                 </div>
                 <h3>{window.medname}</h3>
-                <h3>{ window.dose}</h3>
+                <h3>{window.dose}</h3>
+                
               </ModalBody>
 
 
@@ -601,6 +673,8 @@ const HomePage = () => {
                 <div className="modal-container">this is the Family Contact Numbers.</div>
                 <h3>{window.numname}</h3>
                 <h3>{window.formnum}</h3>
+                {/* <h3>{data[currentIndex].name}</h3>
+                <h3>{data[currentIndex].number}</h3> */}
               </ModalBody>
               <button
                 type="button"

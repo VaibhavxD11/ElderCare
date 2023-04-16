@@ -14,6 +14,9 @@ import "./HomePage.css";
 
 const HomeGuardian = () => {
 
+  var uid;
+
+
   useEffect(() => {
     toast.success('Login Success !', {
       position: toast.POSITION.TOP_CENTER,
@@ -25,49 +28,54 @@ const HomeGuardian = () => {
   }, []);
 
 
-
   const [Gdata, setGData] = useState({
-    email: window.useremail
+    email: window.useremail,
+    id: window.useruid
   });
 
 
   function UserDetails() {
-    const [user, setUser] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const [guser, setgUser] = useState(null);
+    const [gloading, setgLoading] = useState(true);
 
     useEffect(() => {
-      const fetchUser = async () => {
+      const fetchGUser = async () => {
         try {
           const url = "http://localhost:8080/gUserDetails";
           const { data: res } = await axios.post(url, Gdata);
-          setUser(res);
-          setLoading(false);
+          setgUser(res);
+          setgLoading(false);
         } catch (error) {
           console.error(error);
         }
       };
-      fetchUser();
+      fetchGUser();
     }, [window.useremail]);
 
-    if (loading) {
+    if (gloading) {
       return null;
     }
 
-    if (!user) {
+    if (!guser) {
       return <div>User not found</div>;
     }
 
     // profile data
 
-    window.elderName = user.elderName;
-    window.num = user.number;
-    window.guardName = user.guardName;
-    window.useruid = user.uid;
+    window.elderName = guser.elderName;
+    window.num = guser.number;
+    window.guardName = guser.guardName;
+    window.userid = guser.uid;
+
 
     return (
       null
     );
   }
+
+  UserDetails();
+
+
 
 
 
@@ -139,13 +147,14 @@ const HomeGuardian = () => {
   // start
 
   // 1) Yoga
+
   const [ydata, setYData] = useState({
     name: "",
     duration: "",
     time: "",
     link: "",
     email: window.useremail,
-    uid: window.useruid,
+    uid: window.userid,
   });
 
   const [yerror, setYError] = useState("")
@@ -176,10 +185,12 @@ const HomeGuardian = () => {
     }
 
     setYData("");
+    window.currentdate = new Date();
 
   }
 
   // 2) Food
+ 
 
   const [fdata, setFData] = useState({
     breakfast: "",
@@ -187,7 +198,7 @@ const HomeGuardian = () => {
     hightea: "",
     dinner: "",
     email: window.useremail,
-    uid: window.useruid
+    uid: window.userid,
   });
 
   const [ferror, setFError] = useState("")
@@ -218,6 +229,7 @@ const HomeGuardian = () => {
       }
     }
     setFData("");
+    window.currentdate = new Date();
 
   }
 
@@ -233,7 +245,7 @@ const HomeGuardian = () => {
     hightea: "",
     dinner: "",
     email: window.useremail,
-    uid: window.useruid,
+    uid: window.userid,
   });
 
   const [merror, setMError] = useState("")
@@ -269,6 +281,7 @@ const HomeGuardian = () => {
       }
     }
     setMData("");
+    window.currentdate = new Date();
 
   }
 
@@ -283,7 +296,7 @@ const HomeGuardian = () => {
     place: "",
     description: "",
     email: window.useremail,
-    uid: window.useruid
+    uid: window.userid,
   });
 
   const [cerror, setCError] = useState("")
@@ -315,6 +328,7 @@ const HomeGuardian = () => {
       }
     }
     setCData("");
+    window.currentDate = new Date();
 
   }
 
@@ -326,7 +340,7 @@ const HomeGuardian = () => {
     name: "",
     number: "",
     email: window.useremail,
-    uid: window.useruid
+    uid: window.userid,
   });
 
   const [perror, setPError] = useState("")
@@ -359,6 +373,7 @@ const HomeGuardian = () => {
     }
 
     setPData("");
+    window.currentdate = new Date();
 
   }
 
@@ -387,13 +402,14 @@ const HomeGuardian = () => {
   const [count, setCount] = useState(0);
 
 
+
   return (
     <>
-      <Navbar />
+      {/* <UserDetails /> */}
       <div>
         <ToastContainer />
       </div>
-      <UserDetails />
+      <Navbar />
       <Container fluid>
         <Row className="main-row-home-1 ">
           {/* //EMERGENCY contact number */}
@@ -552,7 +568,7 @@ const HomeGuardian = () => {
                   <button
                     type="button"
                     className="close-button"
-                    onClick={() => setMedmodal(!Medmodal)}
+                    onClick={handleMSubmit}
                   >
                     Publish
                   </button>

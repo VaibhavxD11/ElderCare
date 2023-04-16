@@ -56,6 +56,8 @@ app.use(require("./routes/cform"));
 app.use(require("./routes/mform"));
 app.use(require("./routes/nform"));
 app.use(require("./routes/fform"));
+app.use(require("./routes/points"));
+app.use(require("./routes/getpoints"));
 
 
 

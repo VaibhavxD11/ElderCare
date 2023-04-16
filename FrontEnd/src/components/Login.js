@@ -49,6 +49,7 @@ const Login = () => {
 
       if (res.message == "Login Success") {
         window.isLoggedIn = true;
+        window.elder = false;
         window.useremail = data.email;
       }
       // guardian email
@@ -80,6 +81,7 @@ const Login = () => {
 
       if (res.message == "Login Success") {
         window.isLoggedIn = true;
+        window.elder = true;
         window.useruid = Edata.id;
       }
 
