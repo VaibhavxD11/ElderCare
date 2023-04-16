@@ -12,9 +12,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import "./toast.css";
 import "./HomePage.css";
 
-
 const HomeGuardian = () => {
-
 
   useEffect(() => {
     toast.success('Login Success !', {
@@ -400,7 +398,7 @@ const HomeGuardian = () => {
         <Row className="main-row-home-1 ">
           {/* //EMERGENCY contact number */}
 
-          <div id = "points-text">Your elder has earned some points</div>
+          <div id="points-text">Your elder has earned some points</div>
           <div className="main-points">
             <img src="coin.jpg" className="points-vector"></img>
             <div> = {count}</div>
@@ -492,8 +490,6 @@ const HomeGuardian = () => {
 
 
                 <form onSubmit={handleMSubmit}>
-
-
                   <div className="med-name-class">
                     <label id="med-label">Medicine Name</label>
                     <input type="text" id="med-input"
@@ -507,12 +503,12 @@ const HomeGuardian = () => {
 
                   <div className="med-name-class">
                     <label>Dose of the medicine</label>
-                      <input type="text" id="med-input"
-                        name="dose"
-                        value={mdata.dose}
-                        onChange={handleMChange}
-                        placeholder="eg. full or half tablet"
-                      ></input>
+                    <input type="text" id="med-input"
+                      name="dose"
+                      value={mdata.dose}
+                      onChange={handleMChange}
+                      placeholder="eg. full or half tablet"
+                    ></input>
                   </div>
 
                   <div className="time-checkbox-button-class">
@@ -545,7 +541,8 @@ const HomeGuardian = () => {
 
                     <br></br>
 
-                    <button id="submit-button">
+                    <button id="submit-button"
+                    >
                       Upload image
                     </button>
                   </div>
