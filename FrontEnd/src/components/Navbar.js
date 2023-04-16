@@ -104,7 +104,7 @@ const Navbar = () => {
   else {
     Name1 = window.guardName;
     UserID = window.useremail;
-    Name2 = window.elderName
+    Name2 = window.useruid;
   }
 
 
