@@ -142,10 +142,13 @@ const Navbar = () => {
                       <img src="profile.jpg" alt="Profile Image"></img>
                       <span>Username</span>
                     </div>
-                    <div class="dropdown-content">
+                    <div className="dropdown-content">
                       <a href="#">{Name1}</a>
                       <a href="#">{UserID}</a>
                       <a href="#">{Name2}</a>
+
+                      <hr></hr>
+
                       <button class="btn btn-warning-outline button-login" onClick={changeState}>Sign Out</button>
                     </div>
                   </div>
