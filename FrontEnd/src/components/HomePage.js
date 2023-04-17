@@ -324,7 +324,7 @@ const HomePage = () => {
 
     window.checkupname = checkup.name;
     window.cplace = checkup.place;
-    window.cdesc = checkup.descprition;
+    window.cdesc = checkup.description;
 
 
 
@@ -676,13 +676,8 @@ const HomePage = () => {
                     </tr>
                     <tr>
                       <td>{window.checkupname}</td>
-                      <td>{window.checkupname}</td>
+                      <td>{window.cplace}</td>
                       <td>{window.cdesc}</td>
-                    </tr>
-                    <tr>
-                      <td>Heart checkup</td>
-                      <td>Fortis</td>
-                      <td>arteries check</td>
                     </tr>
                   </table>
                   <br></br>
@@ -791,8 +786,8 @@ const HomePage = () => {
                     <tr>
                       <td>{window.yoganame}</td>
                       <td>{window.yDuration}</td>
-                      <td>Jawpmfepipur</td>
-                      <td>youtube</td>
+                      <td>{window.yTime}</td>
+                      <td>{window.yLink}</td>
                     </tr>
                     
                   </table>
