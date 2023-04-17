@@ -757,7 +757,7 @@ const HomePage = () => {
                           <tr key={index}>
                             <td>{item.name}</td>
                             <td>{item.place}</td>
-                            <td>{item.desc}</td>
+                            <td>{item.description}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -867,19 +867,26 @@ const HomePage = () => {
                 <div className="modal-container">
                 <br></br>
                   <table id="customers">
-                    <tr>
-                      <th>Exercise Name</th>
-                      <th>Duration</th>
-                      <th>Time</th>
-                      <th>Reference Link</th>
-                    </tr>
-                    <tr>
-                      <td>{window.yoganame}</td>
-                      <td>{window.yDuration}</td>
-                      <td>Jawpmfepipur</td>
-                      <td>youtube</td>
-                    </tr>
-                    
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Time</th>
+                        <th>Points</th>
+                        <th>Link</th>
+                        <th>Link</th>
+                        <th>Link</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {yoga.map((item, index) => (
+                        <tr key={index}>
+                          <td>{item.name}</td>
+                          <td>{item.time}</td>
+                          <td>{item.duration}</td>
+                          <td>{item.link}</td>
+                        </tr>
+                      ))}
+                    </tbody>
                   </table>
                   <br></br>
                 </div>
