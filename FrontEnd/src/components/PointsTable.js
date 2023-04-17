@@ -1,7 +1,7 @@
 import React from "react";
 import "./leaderboard.css";
 
-const ExampleTable = ({ data }) => {
+const PointsTable = ({ data }) => {
   return (
     <table className="leader">
       <thead>
@@ -32,4 +32,4 @@ const ExampleTable = ({ data }) => {
   );
 };
 
-export default ExampleTable;
+export default PointsTable;
