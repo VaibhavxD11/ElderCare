@@ -17,7 +17,6 @@ import { Modal, ModalBody, ModalFooter, ModalHeader } from "reactstrap";
 const HomePage = () => {
 
 
-
   const [Edata, setEData] = useState({
     id: window.useruid
   });
@@ -26,8 +25,7 @@ const HomePage = () => {
     handlePSubmit();
   }, [])
 
-
-
+  
 
 
 
@@ -161,9 +159,11 @@ const HomePage = () => {
 
   // fetch Form Data
 
+  const [yoga, setYoga] = useState([]);
+  const [yloading, setYLoading] = useState(true);
+  YogaForm();
+
   function YogaForm() {
-    const [yoga, setYoga] = useState(null);
-    const [yloading, setYLoading] = useState(true);
 
     useEffect(() => {
       const fetchYForm = async () => {
@@ -172,7 +172,7 @@ const HomePage = () => {
           const url = "http://localhost:8080/yform";
           const { data: res } = await axios.post(url, Edata);
           console.log(res[0]);
-          setYoga(res[0]);
+          setYoga(res);
           setYLoading(false);
         } catch (error) {
           console.error(error);
@@ -202,9 +202,20 @@ const HomePage = () => {
   }
 
 
+  // const yitems = yoga.map((item) => ({
+  //   name: item.name,
+  //   duration: item.duration,
+  //   time: item.time,
+  //   link : item.link
+  // }));
+
+
+  const [med, setMed] = useState([]);
+  const [mloading, setMLoading] = useState(true);
+  MedForm();
+
   function MedForm() {
-    const [med, setMed] = useState(null);
-    const [mloading, setMLoading] = useState(true);
+    
 
     useEffect(() => {
       const fetchMForm = async () => {
@@ -213,7 +224,7 @@ const HomePage = () => {
           const url = "http://localhost:8080/mform";
           const { data: res } = await axios.post(url, Edata);
           console.log(res[0]);
-          setMed(res[0]);
+          setMed(res);
           setMLoading(false);
         } catch (error) {
           console.error(error);
@@ -246,10 +257,22 @@ const HomePage = () => {
     );
   }
 
+  // const mitems = med.map((item) => ({
+  //   name: item.name,
+  //   dose: item.dose,
+  //   breakfast: item.breakfast,
+  //   lunch: item.lunch,
+  //   hightea: item.hightea,
+  //   dinner: item.dinner
+  // }));
+
+
+  const [food, setFood] = useState([]);
+  const [floading, setFLoading] = useState(true);
+  FoodForm();
 
   function FoodForm() {
-    const [food, setFood] = useState(null);
-    const [floading, setFLoading] = useState(true);
+    
 
     useEffect(() => {
       const fetchFForm = async () => {
@@ -258,7 +281,7 @@ const HomePage = () => {
           const url = "http://localhost:8080/fform";
           const { data: res } = await axios.post(url, Edata);
           console.log(res[0]);
-          setFood(res[0]);
+          setFood(res);
           setFLoading(false);
         } catch (error) {
           console.error(error);
@@ -291,18 +314,28 @@ const HomePage = () => {
   }
 
 
-  function CheckupForm() {
-    const [checkup, setCheckup] = useState(null);
-    const [cloading, setCLoading] = useState(true);
+  // const fitems = food.map((item) => ({
+  //   breakfast: item.breakfast,
+  //   lunch: item.lunch,
+  //   hightea: item.hightea,
+  //   dinner: item.dinner
+  // }));
 
+
+
+  const [checkup, setCheckup] = useState([]);
+  const [cloading, setCLoading] = useState(true);
+  CheckupForm();
+  function CheckupForm() {
+    
     useEffect(() => {
       const fetchCForm = async () => {
         try {
           console.log(Edata);
           const url = "http://localhost:8080/cform";
           const { data: res } = await axios.post(url, Edata);
-          console.log(res[0]);
-          setCheckup(res[0]);
+          console.log(res);
+          setCheckup(res);
           setCLoading(false);
         } catch (error) {
           console.error(error);
@@ -334,14 +367,22 @@ const HomePage = () => {
     );
   }
 
+  // const citems = checkup.map((item) => ({
+  //   name: item.name,
+  //   place: item.place,
+  //   desc: item.description
+  // }));
+
 
   const [data, setData] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
 
+  const [num, setNum] = useState([]);
+  const [nloading, setNLoading] = useState(true);
+  NumForm();
+
   function NumForm() {
-    const [num, setNum] = useState(null);
-    const [nloading, setNLoading] = useState(true);
 
     useEffect(() => {
       const fetchNForm = async () => {
@@ -350,7 +391,7 @@ const HomePage = () => {
           const url = "http://localhost:8080/nform";
           const { data: res } = await axios.post(url, Edata);
           console.log(res[0]);
-          setNum(res[0]);
+          setNum(res);
           setData(res);
           setNLoading(false);
         } catch (error) {
@@ -382,6 +423,25 @@ const HomePage = () => {
     );
   }
 
+
+  //function calls
+
+  YogaForm();
+  MedForm();
+  FoodForm();
+  CheckupForm();
+  NumForm();
+
+  // const nitems = num.map((item) => ({
+  //   name: item.name,
+  //   number: item.number
+  // }));
+
+
+
+  
+
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex(prevIndex =>
@@ -401,15 +461,6 @@ const HomePage = () => {
   //   }
   // })
 
-
-
-  //function calls
-
-  YogaForm();
-  MedForm();
-  FoodForm();
-  CheckupForm();
-  NumForm();
 
 
 
@@ -556,22 +607,33 @@ const HomePage = () => {
 
                 <div className="modal-wrapper"></div>
                 <div className="modal-container">
-                <br></br>
-                  <table id="customers">
-                    <tr>
-                      <th>Medicine Name</th>
-                      <th>Image</th>
-                      <th>Time</th>
-                      <th>Dose</th>
-                    </tr>
-                    <tr>
-                      <td>{window.medname}</td>
-                      <td>powekp</td>
-                      <td>Jawpmfepipur</td>
-                      <td>{window.dose}</td>
-                    </tr>
-                    
-                  </table>
+                  <br></br>
+                  <div style={{ overflowY:'scroll', height:'250px'}}>
+                    <table id="customers">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Time</th>
+                          <th>Points</th>
+                          <th>Link</th>
+                          <th>Link</th>
+                          <th>Link</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {med.map((item, index) => (
+                          <tr key={index}>
+                            <td>{item.name}</td>
+                            <td>{item.dose}</td>
+                            <td>{item.breakfast}</td>
+                            <td>{item.lunch}</td>
+                            <td>{item.hightea}</td>
+                            <td>{item.dinner}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                   <br></br>
                 </div>
 
@@ -613,21 +675,31 @@ const HomePage = () => {
               <ModalBody>
               <div className="modal-wrapper"></div>
                 <div className="modal-container">
-                <br></br>
-                  <table id="customers">
-                    <tr>
-                      <th>Breakfast</th>
-                      <th>Lunch</th>
-                      <th>High Tea</th>
-                      <th>Dose</th>
-                    </tr>
-                    <tr>
-                      <td>{window.fBreakfast}</td>
-                      <td>powekp</td>
-                      <td>Jawpmfepipur</td>
-                      <td>bkhb ku k</td>
-                    </tr>
-                  </table>
+                  <br></br>
+                  <div style={{ overflowY: 'scroll', height: '250px' }}>
+                    <table id="customers">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Time</th>
+                          <th>Points</th>
+                          <th>Link</th>
+                          <th>Link</th>
+                          <th>Link</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {food.map((item, index) => (
+                          <tr key={index}>
+                            <td>{item.breakfast}</td>
+                            <td>{item.lunch}</td>
+                            <td>{item.hightea}</td>
+                            <td>{item.dinner}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                   <br></br>
                 </div>
               </ModalBody>
@@ -667,20 +739,32 @@ const HomePage = () => {
 
               <div className="modal-wrapper"></div>
                 <div className="modal-container">
-                <br></br>
-                  <table id="customers">
-                    <tr>
-                      <th>Name</th>
-                      <th>Place</th>
-                      <th>Description</th>
-                    </tr>
-                    <tr>
-                      <td>{window.checkupname}</td>
-                      <td>{window.cplace}</td>
-                      <td>{window.cdesc}</td>
-                    </tr>
-                  </table>
                   <br></br>
+                  <div style={{ overflowY: 'scroll', height: '250px' }}>
+                    <table id="customers">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Time</th>
+                          <th>Points</th>
+                          <th>Link</th>
+                          <th>Link</th>
+                          <th>Link</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {checkup.map((item, index) => (
+                          <tr key={index}>
+                            <td>{item.name}</td>
+                            <td>{item.place}</td>
+                            <td>{item.desc}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  <br></br>
+
                 </div>
               </ModalBody>
               <button
@@ -717,25 +801,31 @@ const HomePage = () => {
 
               <div className="modal-wrapper"></div>
                 <div className="modal-container">
-                <br></br>
-                  <table id="customers">
-                    <tr>
-                      <th>Name</th>
-                      <th>Mobile No.</th>
-                      <th>Image</th>
-                    </tr>
-                    <tr>
-                      <td>{window.numname}</td>
-                      <td>{window.formnum}</td>
-                      <td>image</td>
-                    </tr>
-                    <tr>
-                      <td>Piyush</td>
-                      <td>9460868085</td>
-                      <td>Image</td>
-                    </tr>
-                  </table>
                   <br></br>
+                  <div style={{ overflowY: 'scroll', height: '250px' }}>
+                    <table id="customers">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Time</th>
+                          <th>Points</th>
+                          <th>Link</th>
+                          <th>Link</th>
+                          <th>Link</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {num.map((item, index) => (
+                          <tr key={index}>
+                            <td>{item.name}</td>
+                            <td>{item.number}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  <br></br>
+
                 </div>
                 {/* <h3>{data[currentIndex].name}</h3>
                 <h3>{data[currentIndex].number}</h3> */}
@@ -786,8 +876,8 @@ const HomePage = () => {
                     <tr>
                       <td>{window.yoganame}</td>
                       <td>{window.yDuration}</td>
-                      <td>{window.yTime}</td>
-                      <td>{window.yLink}</td>
+                      <td>Jawpmfepipur</td>
+                      <td>youtube</td>
                     </tr>
                     
                   </table>

@@ -50,6 +50,7 @@
   border-collapse: collapse;
   border-radius: 20%;
   width: 100%;
+  /* overflow-y: scroll; */
 }
 
 #customers td, #customers th {
