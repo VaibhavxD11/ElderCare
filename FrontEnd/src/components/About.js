@@ -6,6 +6,8 @@ import { SocialIcon } from 'react-social-icons';
 // import { Magnifier } from "react-image-magnify";
 import './About.css';
 
+//Hello
+
 function About() {
     return (
         <>
