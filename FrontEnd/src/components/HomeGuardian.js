@@ -489,7 +489,7 @@ const HomeGuardian = () => {
 
             <center>
               <img
-                src="sos.png"
+                src="sos.jpg"
                 alt="sos image"
                 className="card-image img-fluid"
                 onClick={() => setSosmodal(true)}
