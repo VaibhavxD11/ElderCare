@@ -5,18 +5,10 @@ import axios from "axios";
 import { useState, useEffect } from 'react';
 import "./leaderboard.css";
 
-import ExampleTable from "./ExampleTable";
+import ExampleTable from "./PointsTable";
 
 
 const LeaderBoard = () => {
-  // useEffect(() => {
-  //     const od = new Date();
-  //     const cd = new Date('2023-04-20');
-  //     if (cd != od) {
-  //         console.log("Same");
-  //     }
-  // });
-
 
 
   // User Points
@@ -26,9 +18,6 @@ const LeaderBoard = () => {
   const [Edata, setEData] = useState({
     id: window.useruid
   });
-
-  const [points, setPoints] = useState([]);
-  const [username, setUserName] = useState([]);
 
 
 
@@ -41,8 +30,6 @@ const LeaderBoard = () => {
           const url = "http://localhost:8080/getpoints";
           const res = await axios.get(url);
           console.log(res.data.data);
-          setPoints(res.data.data[1].point);
-          setUserName(res.data.data[1].name);
           setP(res.data.data);
           setPLoading(false);
         } catch (error) {
@@ -67,12 +54,6 @@ const LeaderBoard = () => {
     );
   }
 
-  // console.log(p[0].point);
-
-  // const items = p.map((item) => ({
-  //   number: item.point,
-  //   name: item.name,
-  // }));
 
 
   Points();
