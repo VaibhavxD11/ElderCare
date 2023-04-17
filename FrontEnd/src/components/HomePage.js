@@ -531,34 +531,29 @@ const HomePage = () => {
                   <br></br>
                   <table id="customers">
                     <tr>
-                      <th>Medicine Name</th>
-                      <th>Image</th>
-                      <th>Time</th>
-                      <th>Dose</th>
+                      <th>Department</th>
+                      <th>Contact No.</th>
+                      <th>Address</th>
                     </tr>
                     <tr>
-                      <td>knokgo</td>
-                      <td>powekp</td>
-                      <td>Jawpmfepipur</td>
-                      <td>Jawpmfepipur</td>
+                      <td>Police</td>
+                      <td>100</td>
+                      <td>Jaipur</td>
                     </tr>
                     <tr>
                       <td>Ambulance</td>
                       <td>102</td>
-                      <td>Jodhpur</td>
-                      <td>Jodhpur</td>
+                      <td>Jaipur</td>
                     </tr>
                     <tr>
                       <td>Doctor</td>
                       <td>8797988979</td>
-                      <td>Delhi</td>
-                      <td>Delhi</td>
+                      <td>Jaipur</td>
                     </tr>
                     <tr>
                       <td>Fire / rescue</td>
                       <td>101</td>
-                      <td>Andhra pradesh</td>
-                      <td>Andhra pradesh</td>
+                      <td>Jaipur</td>
                     </tr>
                   </table>
                   <br></br>
@@ -681,12 +676,10 @@ const HomePage = () => {
                     <table id="customers">
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Time</th>
-                          <th>Points</th>
-                          <th>Link</th>
-                          <th>Link</th>
-                          <th>Link</th>
+                          <th>Breakfast</th>
+                          <th>Lunch</th>
+                          <th>HighTea</th>
+                          <th>Dinner</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -746,11 +739,8 @@ const HomePage = () => {
                       <thead>
                         <tr>
                           <th>Name</th>
-                          <th>Time</th>
-                          <th>Points</th>
-                          <th>Link</th>
-                          <th>Link</th>
-                          <th>Link</th>
+                          <th>Place</th>
+                          <th>Description</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -808,11 +798,8 @@ const HomePage = () => {
                       <thead>
                         <tr>
                           <th>Name</th>
-                          <th>Time</th>
-                          <th>Points</th>
-                          <th>Link</th>
-                          <th>Link</th>
-                          <th>Link</th>
+                          <th>Mobile No.</th>
+                          <th>Image</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -820,6 +807,7 @@ const HomePage = () => {
                           <tr key={index}>
                             <td>{item.name}</td>
                             <td>{item.number}</td>
+                            <td>Image</td>
                           </tr>
                         ))}
                       </tbody>
@@ -871,10 +859,8 @@ const HomePage = () => {
                     <thead>
                       <tr>
                         <th>Name</th>
+                        <th>Duration</th>
                         <th>Time</th>
-                        <th>Points</th>
-                        <th>Link</th>
-                        <th>Link</th>
                         <th>Link</th>
                       </tr>
                     </thead>
@@ -882,8 +868,8 @@ const HomePage = () => {
                       {yoga.map((item, index) => (
                         <tr key={index}>
                           <td>{item.name}</td>
-                          <td>{item.time}</td>
                           <td>{item.duration}</td>
+                          <td>{item.time}</td>
                           <td>{item.link}</td>
                         </tr>
                       ))}

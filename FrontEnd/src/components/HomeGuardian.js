@@ -448,34 +448,29 @@ const HomeGuardian = () => {
                   <br></br>
                   <table id="customers">
                     <tr>
-                      <th>Medicine Name</th>
-                      <th>Image</th>
-                      <th>Time</th>
-                      <th>Dose</th>
+                      <th>Department</th>
+                      <th>Contact No.</th>
+                      <th>Address</th>
                     </tr>
                     <tr>
-                      <td>knokgo</td>
-                      <td>powekp</td>
-                      <td>Jawpmfepipur</td>
-                      <td>Jawpmfepipur</td>
+                      <td>Police</td>
+                      <td>100</td>
+                      <td>Jaipur</td>
                     </tr>
                     <tr>
                       <td>Ambulance</td>
                       <td>102</td>
-                      <td>Jodhpur</td>
-                      <td>Jodhpur</td>
+                      <td>Jaipur</td>
                     </tr>
                     <tr>
                       <td>Doctor</td>
                       <td>8797988979</td>
-                      <td>Delhi</td>
-                      <td>Delhi</td>
+                      <td>Jaipur</td>
                     </tr>
                     <tr>
                       <td>Fire / rescue</td>
                       <td>101</td>
-                      <td>Andhra pradesh</td>
-                      <td>Andhra pradesh</td>
+                      <td>Jaipur</td>
                     </tr>
                   </table>
                   <br></br>
