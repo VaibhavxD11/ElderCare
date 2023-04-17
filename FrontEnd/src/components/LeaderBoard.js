@@ -81,38 +81,8 @@ const LeaderBoard = () => {
   return (
     <>
       <Navbar />
-      <div>
-        {/* <div>{p[0].point}</div> */}
-        <section className="hero-section">
-          {/* <h2>{p[0].point}</h2> */}
-
-          <div style={{ height: '200px', overflowY: 'scroll', padding: '20px', width: 'auto'}}>
-            {items.map((item, index) => (
-              <div key={index}>
-                {index === 0 || index === 1 || index === 2 ? (
-                  <h2>{<img src="favicon.ico"></img>},{item.number}, {item.name}</h2>
-
-                ) : 
-                  <h2>{index + 1},{item.number}, {item.name}</h2>
-                }
-
-
-                {/* <h2>{index + 1},{item.number}, {item.name}</h2> */}
-                
-                
-                {/* <h2>{index},{item.number}, {item.name}</h2>
-                <h2>{index},{item.number}, {item.name}</h2>
-                <h2>{index},{item.number}, {item.name}</h2> */}
-              </div>
-            ))}
-          </div>
-
-          
-        </section>
-        {/* <h1>Current Date and Time:</h1>
-              <h2>{new Date().getTime()}</h2> */}
-
-
+      <div className="points" style={{ height:'450px'}}>
+        <ExampleTable data={p} />
       </div>
       <Footer />
     </>

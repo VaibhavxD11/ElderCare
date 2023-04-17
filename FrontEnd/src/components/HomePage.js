@@ -612,12 +612,13 @@ const HomePage = () => {
                     <table id="customers">
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Time</th>
-                          <th>Points</th>
-                          <th>Link</th>
-                          <th>Link</th>
-                          <th>Link</th>
+                          <th>Medicine</th>
+                          <th>Dose</th>
+                          <th>Breakfast</th>
+                          <th>Lunch</th>
+                          <th>HighTea</th>
+                          <th>Dinner</th>
+
                         </tr>
                       </thead>
                       <tbody>
