@@ -87,10 +87,11 @@ const LeaderBoard = () => {
             {items.map((item, index) => (
               <div key={index}>
                 {index === 0 || index === 1 || index === 2 ? (
-                  <h2>{<img src="favicon.ico"></img>},{item.number}, {item.name}</h2>
+                  
+                  <h2>{<img src="favicon.ico" style={{height:"30px"}}></img>}{" "}{item.number}, {item.name}</h2>
 
                 ) : 
-                  <h2>{index + 1},{item.number}, {item.name}</h2>
+                  <h2>{index + 1} { " "}{item.number}, {item.name}</h2>
                 }
 
 
