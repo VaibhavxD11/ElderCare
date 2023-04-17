@@ -3,7 +3,7 @@ import "./leaderboard.css";
 
 const PointsTable = ({ data }) => {
   return (
-    <table className="leader">
+    <table id="leader">
       <thead>
         <tr>
           <th>Rank</th>
@@ -15,12 +15,12 @@ const PointsTable = ({ data }) => {
         {data.map((item, index) => (
           <tr key={index}>
                 {index==0? (
-                <td><img src="first.jpg" className="badge-image"></img></td>
+                <td><img src="first.jpg" id="badge-image"></img></td>
                 ):
                 index==1 ? (
-                <td><img src="second.jpg" className="badge-image"></img></td>
+                <td><img src="second.jpg" id="badge-image"></img></td>
                 ):index==2?(
-                <td><img src="third.jpg" className="badge-image"></img></td>
+                <td><img src="third.jpg" id="badge-image"></img></td>
                 ):<td>{index+1}</td> 
                 }
             <td>{item.name}</td>
