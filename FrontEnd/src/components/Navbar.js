@@ -97,14 +97,14 @@ const Navbar = () => {
   var UserID = "";
 
   if (window.elder) {
-    Name1 = window.elderName;
-    UserID = window.useruid;
-    Name2 = window.guardName
+    Name1 =  "Name: " + window.elderName;
+    UserID =  "ID: "+ window.useruid;
+    Name2 =  "Guardian: " + window.guardName
   }
   else {
-    Name1 = window.guardName;
-    UserID = window.useremail;
-    Name2 = window.useruid;
+    Name1 = "Name: " + window.guardName;
+    UserID = "E-Mail: " + window.useremail;
+    Name2 = "UID: " + window.useruid;
   }
 
 
@@ -140,7 +140,7 @@ const Navbar = () => {
                   <div class="profile">
                     <div class="profile-button">
                       <img src="profile.jpg" alt="Profile Image"></img>
-                      <span>Username</span>
+                      <span>My Profile</span>
                     </div>
                     <div className="dropdown-content">
                       <a href="#">{Name1}</a>

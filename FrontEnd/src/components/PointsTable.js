@@ -3,6 +3,9 @@ import "./leaderboard.css";
 
 const PointsTable = ({ data }) => {
   return (
+
+    <div style={{ overflowY:'scroll', height:'400px'}}>
+
     <table id="leader">
       <thead>
         <tr>
@@ -29,6 +32,7 @@ const PointsTable = ({ data }) => {
         ))}
       </tbody>
     </table>
+    </div>
   );
 };
 

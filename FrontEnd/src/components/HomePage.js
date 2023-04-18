@@ -42,7 +42,7 @@ const HomePage = () => {
 
 
   const [pdata, setPData] = useState({
-    point: 0,
+    point: count,
     uid: window.useruid,
   });
 
