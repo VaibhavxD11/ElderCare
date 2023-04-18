@@ -425,13 +425,6 @@ const HomeGuardian = () => {
         <Row className="main-row-home-1 ">
           {/* //EMERGENCY contact number */}
 
-          <div id="points-text">Your elder has earned some points</div>
-          <div className="main-points">
-            <img src="coin.jpg" className="points-vector"></img>
-            <div> = {count}</div>
-          </div>
-          <br></br>
-
 
 
           <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
