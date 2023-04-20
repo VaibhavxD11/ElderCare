@@ -44,13 +44,13 @@ function ContactForm() {
                             <form classname="InputForm" action="index.html" autocomplete="off">
                                 <h3 class="title">Contact us</h3>
                                 <div class="input-container">
-                                    <input type="text" placeholder="Username" name="name" class="input" style={{ fontSize: "15px" }} />
+                                    <input type="text" placeholder="Name" name="name" class="input" style={{ fontSize: "15px" }} />
                                 </div>
                                 <div class="input-container">
                                     <input type="email" name="email" class="input" placeholder="E-Mail" style={{ fontSize: "15px" }} />
                                 </div>
                                 <div class="input-container">
-                                    <input type="tel" name="phone" class="input" placeholder="Phone" style={{ fontSize: "15px" }} />
+                                    <input type="number" name="phone" class="input" maxlength="10" placeholder="Phone" style={{ fontSize: "15px" }} />
                                 </div>
                                 <div class="input-container textarea">
                                     <textarea name="message" class="input" placeholder="Message" style={{ fontSize: "15px" }}></textarea>

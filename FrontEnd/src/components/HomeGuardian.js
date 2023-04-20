@@ -425,8 +425,6 @@ const HomeGuardian = () => {
         <Row className="main-row-home-1 ">
           {/* //EMERGENCY contact number */}
 
-
-
           <Col className="col-1" xs={12} sm={12} md={6} lg={4}>
             <Modal
               size="lg"
